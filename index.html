@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Axel Brunon, COO externalisé pour dirigeants de PME</title>
+<meta name="description" content="Je clarifie qui fait quoi, j'installe un pilotage simple, et je réduis votre dépendance opérationnelle. COO externalisé pour les dirigeants de PME de 5 à 50 salariés.">
+<link rel="canonical" href="https://axel-brunon.netlify.app/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Axel Brunon, COO externalisé pour dirigeants de PME">
+<meta property="og:description" content="Je clarifie qui fait quoi, j'installe un pilotage simple, et je réduis votre dépendance opérationnelle. COO externalisé pour les dirigeants de PME de 5 à 50 salariés.">
+<meta property="og:url" content="https://axel-brunon.netlify.app/">
+<meta property="og:image" content="https://axel-brunon.netlify.app/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiNmZTdlMDEiLz4KICA8dGV4dCB4PSIzMiIgeT0iNDUiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLCAnVGltZXMgTmV3IFJvbWFuJywgc2VyaWYiIGZvbnQtc2l6ZT0iMzgiIGZvbnQtd2VpZ2h0PSI2MDAiIGZpbGw9IiMxYTBkMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkE8L3RleHQ+Cjwvc3ZnPg==">
+<link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Axel Brunon, COO externalisé","description":"Je clarifie qui fait quoi, j'installe un pilotage simple, et je réduis votre dépendance opérationnelle. COO externalisé pour les dirigeants de PME de 5 à 50 salariés.","url":"https://axel-brunon.netlify.app/","image":"https://axel-brunon.netlify.app/og.jpg","founder":{"@type":"Person","name":"Axel Brunon","jobTitle":"COO externalisé"},"sameAs":["https://www.youtube.com/@axel.brunon","https://www.instagram.com/axel_brunon_biz/"]}</script>
+<!-- Mesure d'audience : coller ici le script de l'outil choisi (Plausible, Umami ou Netlify Analytics). Préférer un outil sans cookie pour éviter un bandeau de consentement. -->
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/fraunces-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/fraunces-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/ibm-plex-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:500;font-display:swap;src:url(fonts/ibm-plex-sans-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(fonts/ibm-plex-sans-latin-600-normal.woff2) format('woff2')}
+
+/* Concept : colonne éditoriale alignée à gauche, sections séparées par l'espace et non par des cartes.
+   Un seul grand moment : le hero, où les sujets en vrac du dirigeant se rangent en six priorités au défilement.
+   Palette : bleu nuit, cyan électrique pour l'ordre, orange pour l'action et le désordre. Sombre par défaut, clair disponible. */
+:root {
+  --bg: #0a1020;
+  --surface: #111a2e;
+  --surface-2: #18243d;
+  --ink: #f2f5fb;
+  --soft: #c5cee2;
+  --mute: #8f9cb8;
+  --line: #24314f;
+  --accent: #4fd1f5;
+  --action: #fe7e01;
+  --action-hover: #feae3f;
+  --on-action: #1a0d00;
+  --alert: #fe7e01;
+  --grid: rgba(79,209,245,.16);
+  --head: 60px;
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f4f7fc; --surface: #ffffff; --surface-2: #e8eef8; --ink: #0e1830; --soft: #3b4966;
+    --mute: #63728f; --line: #d3ddec; --accent: #0a7bb0; --action: #c55300; --action-hover: #a94600;
+    --on-action: #ffffff; --alert: #c55300; --grid: rgba(10,123,176,.13); color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f4f7fc; --surface: #ffffff; --surface-2: #e8eef8; --ink: #0e1830; --soft: #3b4966;
+  --mute: #63728f; --line: #d3ddec; --accent: #0a7bb0; --action: #c55300; --action-hover: #a94600;
+  --on-action: #ffffff; --alert: #c55300; --grid: rgba(10,123,176,.13); color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+p { margin: 0; color: var(--soft); }
+a { color: inherit; }
+img { max-width: 100%; }
+.wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding-inline: 24px; }
+
+/* profondeur : couches fixes qui bougent à des vitesses différentes, visibles à travers les sections translucides */
+.depth { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; background: var(--bg); }
+.depth .orb { position: absolute; border-radius: 50%; filter: blur(70px); will-change: transform; }
+.depth .o1 { width: 46vw; height: 46vw; right: -12vw; top: -10vw; background: radial-gradient(circle, rgba(254,126,1,.34), transparent 68%); }
+.depth .o2 { width: 52vw; height: 52vw; left: -18vw; top: 38vh; background: radial-gradient(circle, rgba(79,209,245,.22), transparent 68%); }
+.depth .o3 { width: 34vw; height: 34vw; right: 6vw; bottom: -14vw; background: radial-gradient(circle, rgba(56,110,255,.26), transparent 68%); }
+.depth .floor { position: absolute; left: -25%; right: -25%; bottom: -8%; height: 62%; transform-origin: 50% 100%; transform: perspective(600px) rotateX(62deg);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 64px 64px;
+  -webkit-mask-image: linear-gradient(to top, #000 0%, transparent 78%); mask-image: linear-gradient(to top, #000 0%, transparent 78%); }
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .depth .orb { opacity: .55; } }
+:root[data-theme="light"] .depth .orb { opacity: .55; }
+
+/* en-tête */
+.site-head { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.site-head .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: var(--head); }
+.brand { display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 600; text-decoration: none; }
+.brand img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; background: #18243d; }
+.brand span { line-height: 1.2; }
+.nav { display: flex; gap: 26px; font-size: .95rem; }
+.nav a { text-decoration: none; color: var(--soft); }
+.nav a:hover { color: var(--accent); }
+@media (max-width: 860px) { .nav { display: none; } .brand small { display: none; } }
+
+/* boutons */
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 14px 26px; border-radius: 999px; font: 600 1rem var(--font-body); text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: background .15s, transform .15s, box-shadow .15s; }
+.btn-main { background: var(--action); color: var(--on-action); box-shadow: 0 10px 30px -12px color-mix(in srgb, var(--action) 80%, transparent); }
+.btn-main:hover { background: var(--action-hover); transform: translateY(-1px); }
+.btn-sm { padding: 10px 18px; font-size: .92rem; }
+.btn-ghost { border-color: var(--line); color: var(--ink); background: transparent; }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.linkbtn { background: none; border: 0; color: var(--accent); font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; padding: 0; }
+.linkbtn:focus-visible, .btn:focus-visible, .fit input:focus-visible + .box, .band:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* hero : le texte et la scène partagent une grille ; sur mobile la scène passe juste sous le titre */
+.hero { padding-block: clamp(40px, 7vw, 80px) clamp(40px, 6vw, 64px); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); grid-template-areas: "title scene" "body scene"; gap: 24px clamp(32px, 6vw, 72px); align-items: start; }
+.h-title { grid-area: title; align-self: end; font-size: clamp(2.2rem, 5vw, 3.7rem); line-height: 1.06; }
+.h-title span { display: block; }
+.h-title .l2 { background: linear-gradient(100deg, var(--accent), var(--action) 30%, var(--accent) 60%, var(--action)); background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: aurora 8s linear infinite; opacity: var(--lit, 1); }
+@keyframes aurora { to { background-position: -250% 0; } }
+.h-body { grid-area: body; }
+.hero-sub { max-width: 52ch; font-size: 1.15rem; }
+.hero-cta { margin-top: 28px; display: flex; gap: 14px 18px; flex-wrap: wrap; align-items: center; }
+.micro { margin-top: 14px; font-size: .92rem; color: var(--mute); max-width: 52ch; }
+.hero-proof { margin: 32px 0 0; padding-top: 20px; border-top: 1px solid var(--line); max-width: 56ch; }
+.hero-proof blockquote { margin: 0; font-family: var(--font-display); font-size: 1.15rem; line-height: 1.45; color: var(--ink); }
+.hero-proof cite { display: block; margin-top: 8px; font-style: normal; font-size: .9rem; color: var(--mute); }
+
+/* scène épinglée sur grand écran : le défilement range les sujets */
+@media (min-width: 861px) and (min-height: 780px) {
+  .hero { height: 155vh; padding: 0; }
+  .hero-pin { position: sticky; top: var(--head); min-height: calc(100vh - var(--head)); display: flex; align-items: center; padding-block: 32px; }
+}
+
+/* scène : des sujets en vrac qui se rangent dans six cases */
+.stage { grid-area: scene; align-self: center; position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: 18px; padding: 18px; background: color-mix(in srgb, var(--surface) 72%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 30px 60px -30px rgba(0,0,0,.55); transition: border-color .6s, box-shadow .6s; }
+.stage.sorted { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); box-shadow: 0 30px 60px -30px rgba(0,0,0,.55), 0 0 40px -12px color-mix(in srgb, var(--accent) 45%, transparent); }
+.stage-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; font-size: .85rem; color: var(--mute); }
+.count { color: var(--soft); }
+.count b { font: 600 1.6rem var(--font-display); color: var(--alert); margin-right: 6px; font-variant-numeric: tabular-nums; transition: color .4s; }
+.stage.sorted .count b { color: var(--accent); }
+.stage-hint { display: inline-flex; align-items: center; gap: 6px; }
+.stage-hint::after { content: ''; width: 7px; height: 7px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); animation: nudge 1.6s ease-in-out infinite; }
+@keyframes nudge { 50% { transform: translateY(3px) rotate(45deg); } }
+.bins { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.bin { border: 1px dashed color-mix(in srgb, var(--line) calc(100% - var(--p, 0) * 100%), var(--accent)); border-radius: 12px; padding: 10px; min-height: 108px; }
+.bin h3 { font: 600 .72rem var(--font-body); text-transform: uppercase; letter-spacing: .06em; color: var(--accent); opacity: calc(.3 + var(--p, 0) * .7); margin-bottom: 8px; }
+.slots { display: flex; flex-wrap: wrap; gap: 5px; }
+.task { display: inline-flex; align-items: center; gap: 6px; padding: 4px 9px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--line); font-size: .78rem; line-height: 1.3; color: var(--ink); max-width: 100%; will-change: transform; }
+.task i { width: 6px; height: 6px; border-radius: 50%; background: var(--alert); flex: none; transition: background .4s; }
+.task.done i { background: var(--accent); }
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr; grid-template-areas: "title" "scene" "body"; }
+  .stage { padding: 14px; }
+}
+@media (max-width: 420px) { .task { font-size: .72rem; padding: 3px 7px; } .bin { padding: 8px; min-height: 0; } .bin h3 { margin-bottom: 6px; } .slots { gap: 4px; } }
+
+/* bande de preuves */
+.proofs { padding-block: 36px; border-block: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 55%, transparent); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 40px; margin: 0; }
+.stats div { display: grid; gap: 4px; }
+.stats dt { order: 2; color: var(--soft); font-size: .95rem; line-height: 1.45; }
+.stats dd { order: 1; margin: 0; font: 600 clamp(2rem, 4vw, 2.8rem)/1 var(--font-display); color: var(--ink); font-variant-numeric: tabular-nums; }
+.stats dd small { font-size: .55em; color: var(--accent); margin-left: 4px; }
+@media (max-width: 700px) { .stats { grid-template-columns: 1fr; } .stats div { grid-template-columns: 6.5rem minmax(0, 1fr); align-items: center; gap: 16px; } .stats dd { font-size: 2rem; } }
+
+/* sections */
+section { padding-block: clamp(56px, 8vw, 96px); }
+.alt { background: color-mix(in srgb, var(--surface) 62%, transparent); border-block: 1px solid var(--line); }
+.sec-head { max-width: 640px; margin-bottom: 44px; }
+.sec-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.4rem); line-height: 1.15; }
+.sec-head p { margin-top: 14px; }
+
+/* ça a du sens si */
+.fits { display: grid; gap: 14px; max-width: 800px; }
+.fit { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px; padding: 22px 24px; background: color-mix(in srgb, var(--bg) 55%, transparent); border: 1px solid var(--line); border-radius: 14px; cursor: pointer; transition: border-color .2s, background .2s; }
+.fit:hover { border-color: var(--accent); }
+.fit input { position: absolute; opacity: 0; pointer-events: none; }
+.fit .box { width: 26px; height: 26px; border-radius: 8px; border: 2px solid var(--mute); display: grid; place-items: center; margin-top: 2px; transition: background .2s, border-color .2s; }
+.fit .box svg { width: 15px; height: 15px; stroke: var(--bg); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 20; stroke-dashoffset: 20; transition: stroke-dashoffset .3s ease .05s; }
+.fit input:checked + .box { background: var(--accent); border-color: var(--accent); }
+.fit input:checked + .box svg { stroke-dashoffset: 0; }
+.fit:has(input:checked) { border-color: var(--accent); background: var(--surface-2); }
+.fit .lead { display: block; font-size: 1.15rem; font-weight: 500; color: var(--ink); margin-bottom: 6px; }
+.fit-status { margin-top: 24px; max-width: 800px; display: flex; gap: 12px 20px; align-items: center; justify-content: space-between; flex-wrap: wrap; min-height: 52px; }
+.fit-status p { color: var(--ink); }
+
+/* offres */
+.angles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 40px; }
+.angle { padding-block: 24px; border-top: 2px solid var(--line); transition: border-color .3s; }
+.angle:hover { border-top-color: var(--accent); }
+.angle .num { display: block; font: 600 .8rem var(--font-body); color: var(--accent); letter-spacing: .08em; margin-bottom: 10px; }
+.angle h3 { font-size: 1.3rem; }
+.angle p { margin-top: 8px; max-width: 52ch; }
+.angle p + p { margin-top: 12px; }
+.proof-link { display: inline-flex; gap: 10px; align-items: flex-start; margin-top: 16px; color: var(--accent); text-decoration: none; font-weight: 500; font-size: .96rem; line-height: 1.4; }
+.proof-link svg { width: 15px; height: 15px; flex: none; margin-top: 3px; fill: currentColor; }
+.proof-link span { text-decoration: underline; text-underline-offset: 4px; }
+.proof-link:hover { color: var(--ink); }
+@media (max-width: 860px) { .angles { grid-template-columns: 1fr; } }
+
+/* qui je suis */
+.bio { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 80px); align-items: center; }
+.portrait { margin: 0; }
+.portrait .frame { aspect-ratio: 4 / 5; background: radial-gradient(90% 60% at 80% 12%, rgba(254,126,1,.42), transparent 62%), radial-gradient(80% 60% at 8% 100%, rgba(79,209,245,.28), transparent 65%), #14203a; border-radius: 22px; overflow: hidden; display: flex; align-items: flex-end; box-shadow: 0 40px 70px -35px rgba(0,0,0,.7), 0 0 0 1px var(--line); }
+.portrait img { width: 100%; height: auto; display: block; }
+.portrait figcaption { margin-top: 14px; display: grid; gap: 2px; }
+.portrait figcaption b { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; color: var(--ink); }
+.portrait figcaption span { color: var(--mute); font-size: .95rem; }
+.bio-copy { max-width: 60ch; display: grid; gap: 18px; }
+.bio-copy h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.12; }
+.bio-copy p { color: var(--ink); }
+.pull { margin: 6px 0; padding-left: 20px; border-left: 3px solid var(--accent); font-family: var(--font-display); font-size: 1.35rem; line-height: 1.4; color: var(--ink); }
+.marks { margin: 8px 0 0; padding: 0; display: grid; }
+.marks div { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); gap: 4px 20px; padding-block: 14px; border-top: 1px solid var(--line); }
+.marks dt { font-weight: 600; color: var(--ink); }
+.marks dd { margin: 0; color: var(--soft); }
+.channel { font-size: .98rem; color: var(--soft); }
+.channel a { color: var(--accent); text-underline-offset: 4px; }
+@media (max-width: 800px) { .bio { grid-template-columns: 1fr; } .portrait { max-width: 380px; } .marks div { grid-template-columns: 1fr; } }
+
+/* méthode : un fil qui se remplit au défilement */
+.method { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
+.method .sec-head { margin-bottom: 0; position: sticky; top: 100px; }
+.method-cta { margin-top: 36px; }
+.track { position: relative; min-width: 0; }
+.track .fill { position: absolute; left: 18px; top: 19px; width: 2px; height: var(--h, 0px); background: linear-gradient(var(--action), var(--accent)); box-shadow: 0 0 10px color-mix(in srgb, var(--action) 60%, transparent); z-index: 1; border-radius: 2px; }
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+.steps li { position: relative; padding: 0 0 34px 60px; counter-increment: s; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line); display: grid; place-items: center; font: 600 .95rem var(--font-body); color: var(--accent); z-index: 2; transition: background .3s, box-shadow .3s, color .3s; }
+.steps li::after { content: ''; position: absolute; left: 19px; top: 44px; bottom: 6px; width: 1px; background: var(--line); }
+.steps li:last-child { padding-bottom: 0; }
+.steps li:last-child::after { display: none; }
+.steps li.on::before { background: var(--accent); border-color: var(--accent); color: var(--bg); box-shadow: 0 0 14px color-mix(in srgb, var(--accent) 70%, transparent); }
+.steps h3 { font-family: var(--font-body); font-size: 1.12rem; font-weight: 600; padding-top: 6px; }
+.steps p { margin-top: 6px; }
+@media (max-width: 860px) { .method { grid-template-columns: 1fr; } .method .sec-head { position: static; margin-bottom: 8px; } }
+
+/* témoignages */
+.quotes { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); }
+.quote { margin: 0; border-top: 2px solid var(--accent); padding-top: 24px; }
+.quote blockquote { margin: 0; font-family: var(--font-display); font-size: 1.1rem; line-height: 1.6; color: var(--ink); }
+.quote blockquote.clamp { display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden; }
+.quote .more { margin-top: 10px; font-size: .92rem; }
+.quote cite { display: block; margin-top: 20px; font-style: normal; font-size: .95rem; color: var(--mute); }
+.quote cite b { color: var(--ink); font-weight: 600; }
+@media (max-width: 860px) { .quotes { grid-template-columns: 1fr; } }
+
+/* diagnostic et appel final, réunis */
+.final-box { border: 1px solid var(--accent); border-radius: 22px; padding: clamp(28px, 5vw, 56px); background: color-mix(in srgb, var(--surface) 72%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 30px 60px -30px rgba(0,0,0,.55);
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); grid-template-areas: "intro gauge" "next gauge" "act gauge" "reassure reassure"; gap: 20px 56px; align-items: start; }
+.final-intro { grid-area: intro; }
+.final-intro h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.12; }
+.final-intro p { margin-top: 14px; max-width: 52ch; }
+.diag-next { grid-area: next; max-width: 52ch; }
+.final-act { grid-area: act; display: grid; gap: 14px; justify-items: start; }
+.final-act .alt-link { color: var(--soft); text-underline-offset: 4px; }
+.final-act .alt-link:hover { color: var(--accent); }
+.gauge { grid-area: gauge; display: grid; gap: 16px; padding: 22px; border: 1px solid var(--line); border-radius: 16px; background: color-mix(in srgb, var(--bg) 50%, transparent); }
+.gauge-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.score { font: 600 clamp(3rem, 7vw, 4.2rem)/1 var(--font-display); color: var(--ink); font-variant-numeric: tabular-nums; }
+.score small { font-size: .35em; color: var(--mute); margin-left: 4px; }
+.gauge-label { font-size: .85rem; color: var(--mute); }
+.scale-wrap { position: relative; padding-top: 14px; }
+.needle { position: absolute; top: 0; left: var(--s, 0%); width: 2px; height: calc(100% + 4px); background: var(--ink); border-radius: 2px; transform: translateX(-1px); transition: left .05s linear; }
+.needle::before { content: ''; position: absolute; top: -2px; left: -5px; border: 6px solid transparent; border-top-color: var(--ink); border-bottom: 0; }
+.scale { display: flex; gap: 6px; }
+.band { flex: var(--w) 1 0; min-width: 0; padding: 12px 4px; border: 1px solid var(--line); background: var(--surface-2); color: var(--soft); border-radius: 10px; font: 500 .9rem var(--font-body); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.band:hover { border-color: var(--accent); }
+.band[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+.scale-note { font-size: .85rem; color: var(--mute); }
+.profile { border-left: 3px solid var(--accent); padding: 2px 0 2px 18px; min-height: 9.5rem; }
+.profile h3 { font-size: 1.35rem; line-height: 1.2; }
+.profile p { margin-top: 8px; color: var(--ink); }
+.reassure { grid-area: reassure; margin: 8px 0 0; padding: 22px 0 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: .92rem; color: var(--mute); border-top: 1px solid var(--line); }
+.reassure li::before { content: ''; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--accent); margin-right: 9px; vertical-align: middle; }
+@media (max-width: 860px) { .final-box { grid-template-columns: 1fr; grid-template-areas: "intro" "gauge" "next" "act" "reassure"; } }
+@media (max-width: 480px) { .final-box { padding: 26px 18px; } .band { padding: 10px 2px; font-size: .78rem; } .gauge { padding: 14px; } }
+
+/* questions fréquentes */
+.faq { max-width: 760px; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 18px 32px 18px 0; font-weight: 600; color: var(--ink); position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: '+'; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); color: var(--accent); font-size: 1.4rem; font-weight: 400; }
+.faq details[open] summary::after { content: '\2212'; }
+.faq summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.faq p { padding: 0 0 18px; max-width: 60ch; }
+
+footer { padding-block: 36px 56px; border-top: 1px solid var(--line); font-size: .92rem; color: var(--mute); }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+footer a { text-underline-offset: 3px; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+
+/* barre d'action mobile : visible seulement quand aucun autre bouton principal n'est à l'écran */
+.dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); background: color-mix(in srgb, var(--bg) 94%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line); display: none; }
+.dock .btn { width: 100%; }
+@media (max-width: 760px) { .dock { display: block; } footer { padding-bottom: 96px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .h-title .l2, .stage-hint::after { animation: none; }
+  .depth .orb { transform: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="depth" aria-hidden="true"><div class="orb o1" data-s=".10"></div><div class="orb o2" data-s=".22"></div><div class="orb o3" data-s=".34"></div><div class="floor"></div></div>
+
+<header class="site-head"><div class="wrap">
+  <a class="brand" href="#haut"><img src="img/axel-avatar.webp" alt="" width="34" height="34"><span>Axel Brunon <small>COO externalisé</small></span></a>
+  <nav class="nav" aria-label="Sections">
+    <a href="#offres">Ce que je fais</a>
+    <a href="#qui-je-suis">Qui je suis</a>
+    <a href="#methode">Méthode</a>
+    <a href="#diagnostic">Diagnostic</a>
+  </nav>
+  <a class="btn btn-main btn-sm" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=nav" target="_blank" rel="noopener">Faire le diagnostic</a>
+</div></header>
+
+<main id="haut">
+<section class="hero" id="hero"><div class="hero-pin"><div class="wrap hero-grid">
+  <h1 class="h-title"><span class="l1">Vous pilotez tout.</span> <span class="l2">Vous ne devriez piloter que l'essentiel.</span></h1>
+  <div class="stage" id="stage" role="img" aria-label="Dix-huit sujets en vrac se rangent en six priorités : vision, humain, données, gestion des problèmes, process, suivi de l'exécution.">
+    <div class="stage-head"><span class="count" id="count"><b>6</b>priorités claires</span><span class="stage-hint" id="hint" hidden>Défilez pour ranger</span></div>
+    <div class="bins" id="bins"></div>
+  </div>
+  <div class="h-body">
+    <p class="hero-sub">Je clarifie qui fait quoi, j'installe un pilotage simple, et je réduis votre dépendance opérationnelle. Pour que vous travailliez sur votre entreprise, et pas uniquement dedans.</p>
+    <div class="hero-cta" id="hero-cta">
+      <a class="btn btn-main" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=hero" target="_blank" rel="noopener">Faire mon diagnostic en 5 min</a>
+      <a class="btn btn-ghost" href="#methode">Voir comment ça se passe</a>
+    </div>
+    <p class="micro">Mesurez la solidité de votre organisation en 5 min : 6 dimensions clés, 17 questions, résultat par email.</p>
+    <figure class="hero-proof">
+      <blockquote>« Grâce à lui, nous avons gagné en productivité, en visibilité sur nos projets, et en efficacité globale. »</blockquote>
+      <cite>Nicolas, CEO Codaza, client</cite>
+    </figure>
+  </div>
+</div></div></section>
+
+<section class="proofs" aria-label="Repères"><div class="wrap">
+  <dl class="stats">
+    <div><dt>salariés pilotés en tant que COO de PME</dt><dd data-count="70">70</dd></div>
+    <div><dt>établissements et marques gérés en simultané</dt><dd data-count="7">7</dd></div>
+    <div><dt>de chiffre d'affaires sur un secteur de grande distribution</dt><dd><span data-count="11">11</span><small>M€</small></dd></div>
+  </dl>
+</div></section>
+
+<section id="pour-qui"><div class="wrap">
+  <div class="sec-head">
+    <h2>Ça a du sens si...</h2>
+    <p>Ces trois situations reviennent le plus souvent chez les dirigeants avec qui je travaille. Cochez celles qui vous ressemblent.</p>
+  </div>
+  <div class="fits">
+    <label class="fit"><input type="checkbox"><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>
+      <span><span class="lead">Votre entreprise a grandi en chiffre d'affaires et en effectifs, mais l'organisation n'a pas suivi.</span> Pas de fiches de poste claires, pas de tableau de bord, des décisions prises à l'instinct parce qu'il n'y a jamais le temps de faire autrement.</span></label>
+    <label class="fit"><input type="checkbox"><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>
+      <span><span class="lead">Vous êtes absorbé par le quotidien et vous sentez que vous avez perdu la vue d'ensemble.</span> Vous voulez un regard extérieur qui objective ce que vous pressentez déjà, sans y passer six mois de diagnostic.</span></label>
+    <label class="fit"><input type="checkbox"><span class="box"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5"/></svg></span>
+      <span><span class="lead">Vous préparez une transition, une transmission ou un cap de croissance.</span> Et vous voulez structurer l'organisation avant d'y arriver, pas pendant que le sol se dérobe.</span></label>
+  </div>
+  <div class="fit-status" aria-live="polite">
+    <p id="fit-msg"></p>
+    <a class="btn btn-main btn-sm" id="fit-cta" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=situations" target="_blank" rel="noopener" hidden>Mesurer mon organisation</a>
+  </div>
+</div></section>
+
+<section class="alt" id="offres"><div class="wrap">
+  <div class="sec-head">
+    <h2>Trois volets, un seul objectif</h2>
+    <p>Je structure l'entreprise et j'accompagne son dirigeant. Reprendre la main sur votre entreprise : on choisit ensemble ce qui compte le plus pour vous maintenant.</p>
+  </div>
+  <div class="angles">
+    <div class="angle"><span class="num">01</span><h3>Vision et stratégie</h3><p>Un état des lieux complet de l'entreprise et de son dirigeant, pour transformer l'analyse en plan d'action. Des lignes stratégiques qui concilient votre vision et un vrai avantage concurrentiel.</p><p>Dans la durée : un mentorat exécutif, parfois une place au comité de direction, pour ne plus décider seul.</p></div>
+    <div class="angle"><span class="num">02</span><h3>Gestion humaine</h3><p>La bonne personne au bon poste, une équipe qui sait où elle va et pourquoi. Un leadership clair, une culture d'amélioration continue, une communication qui circule.</p></div>
+    <div class="angle"><span class="num">03</span><h3>Systèmes et IA</h3><p>Des outils concrets et un pilotage simple : trésorerie, marges, indicateurs clés. De quoi décider avec des chiffres, pas des impressions.</p><a class="proof-link" href="https://youtu.be/1weCHXPiUAA" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg><span>Un exemple en vidéo : Générer des leads qualifiés avec Claude, en 10 min (+ Notion)</span></a></div>
+  </div>
+</div></section>
+
+<section id="qui-je-suis"><div class="wrap bio">
+  <figure class="portrait">
+    <div class="frame"><img src="img/axel-portrait.webp" alt="Portrait d'Axel Brunon, bras croisés" width="640" height="800" loading="lazy" decoding="async"></div>
+    <figcaption><b>Axel Brunon</b><span>COO externalisé pour dirigeants de PME</span></figcaption>
+  </figure>
+  <div class="bio-copy">
+    <h2>Je structure les entreprises et j'accompagne les dirigeants</h2>
+    <p>Je suis bras droit de CEO et COO externalisé, en freelance. Mon objectif est simple : aider les dirigeants à réussir, sans qu'ils aient à tout porter seuls.</p>
+    <p class="pull">La stratégie ne sert à rien si elle ne se traduit pas en exécution concrète.</p>
+    <p>Je ne suis pas un généraliste qui touche à tout. Je suis un sparring partner pour les dirigeants, capable de les challenger pour faire avancer les choses.</p>
+    <dl class="marks">
+      <div><dt>Aujourd'hui</dt><dd>Bras droit de CEO et COO externalisé, en freelance</dd></div>
+      <div><dt>PME</dt><dd>COO, avec jusqu'à 7 établissements et marques gérés en simultané pour 70 salariés</dd></div>
+      <div><dt>Grande distribution</dt><dd>Un secteur de 26 personnes et 11 M€ de chiffre d'affaires</dd></div>
+    </dl>
+    <p class="channel">Je documente mon parcours de COO externalisé et augmenté, avec des capacités démultipliées par l'intégration de l'IA. <a href="https://www.youtube.com/@axel.brunon" target="_blank" rel="noopener">Voir ma chaîne YouTube</a></p>
+  </div>
+</div></section>
+
+<section class="alt" id="methode"><div class="wrap method">
+  <div class="sec-head">
+    <h2>Le parcours, du premier échange au suivi long terme</h2>
+    <p>Une intervention initiale de quelques semaines, puis un accompagnement qui peut s'étendre sur plusieurs mois. J'ajuste au fil de l'eau plutôt que de livrer un rapport figé.</p>
+    <div class="method-cta"><a class="btn btn-main" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=parcours" target="_blank" rel="noopener">Commencer par le diagnostic</a></div>
+  </div>
+  <div class="track" id="track"><span class="fill" id="stepfill"></span>
+    <ol class="steps">
+      <li><h3>Premier contact</h3><p>On parle de votre situation et de vos objectifs, sans engagement.</p></li>
+      <li><h3>Diagnostic</h3><p>État des lieux de six dimensions : vision, humain, données, gestion des problèmes, process et suivi de l'exécution.</p></li>
+      <li><h3>Plan d'action</h3><p>On priorise et on choisit ensemble l'angle d'intervention le plus utile.</p></li>
+      <li><h3>Mise en œuvre</h3><p>Outils concrets, formation, accompagnement au changement.</p></li>
+      <li><h3>Suivi long terme</h3><p>Jusqu'à 12 mois, parfois une place au comité de direction.</p></li>
+    </ol>
+  </div>
+</div></section>
+
+<section id="temoignages"><div class="wrap">
+  <div class="sec-head"><h2>Ce qu'en disent ceux qui ont travaillé avec moi</h2></div>
+  <div class="quotes">
+    <figure class="quote">
+      <blockquote id="q1">Axel a été un véritable atout pour Codaza. Il m'a accompagné dans la mise en place d'une stratégie claire et efficiente pour l'entreprise, en allant bien au-delà du simple conseil. Il s'est impliqué concrètement dans le déploiement du plan d'actions, avec un vrai souci du détail et une excellente compréhension des enjeux internes. Grâce à lui, nous avons gagné en productivité, en visibilité sur nos projets, et en efficacité globale. Il agit comme un bras droit, en immersion totale dans l'entreprise, avec une approche à la fois humaine, structurée et impactante.</blockquote>
+      <button class="linkbtn more" type="button" aria-controls="q1" aria-expanded="false" hidden>Lire tout le témoignage</button>
+      <cite><b>Nicolas</b><br>CEO Codaza, client</cite>
+    </figure>
+    <figure class="quote">
+      <blockquote id="q2">Axel est un excellent mentor. J'ai pu travailler sous sa direction pendant deux ans et il a été un élément clé dans mon développement professionnel. Grâce à ses conseils, j'ai gagné en organisation et en efficacité, et développé ma vision stratégique grâce à une communication fluide et régulière. Il a instauré de nouvelles procédures pour optimiser nos tâches et notre planification. Il accompagne ses collaborateurs avec transparence, tout en faisant progresser leur autonomie.</blockquote>
+      <button class="linkbtn more" type="button" aria-controls="q2" aria-expanded="false" hidden>Lire tout le témoignage</button>
+      <cite><b>Killian</b><br>Directeur des opérations</cite>
+    </figure>
+  </div>
+</div></section>
+
+<section class="final" id="diagnostic"><div class="wrap">
+  <div class="final-box">
+    <div class="final-intro">
+      <h2>Où en est votre organisation ?</h2>
+      <p>17 questions, 5 minutes. Vous recevez par email votre score sur 100, votre profil et la dimension de votre organisation où le score est le plus faible.</p>
+    </div>
+    <div class="gauge" id="gauge">
+      <div class="gauge-top"><span class="score"><b id="score-n">32</b><small>/100</small></span><span class="gauge-label">Exemple de résultat</span></div>
+      <div class="scale-wrap" id="scale-wrap" style="--s:32%"><span class="needle" aria-hidden="true"></span>
+        <div class="scale" role="group" aria-label="Tranches de score">
+          <button class="band" type="button" style="--w:40" data-i="0" aria-pressed="true">0-40</button>
+          <button class="band" type="button" style="--w:25" data-i="1" aria-pressed="false">41-65</button>
+          <button class="band" type="button" style="--w:20" data-i="2" aria-pressed="false">66-85</button>
+          <button class="band" type="button" style="--w:15" data-i="3" aria-pressed="false">86-100</button>
+        </div>
+      </div>
+      <p class="scale-note">Choisissez une tranche pour lire le profil correspondant.</p>
+      <div class="profile" id="profile" aria-live="polite">
+        <h3>L'entreprise tourne autour de vous</h3>
+        <p>Vous êtes partout parce que vous avez toujours été la solution la plus fiable. Cela a un coût : votre temps, votre énergie, et la capacité de votre entreprise à grandir sans vous.</p>
+      </div>
+    </div>
+    <p class="diag-next">Dans chaque cas, je vous propose un échange gratuit de 30 minutes. On regarde ce que révèle votre score sur votre organisation, les points de levier prioritaires pour votre situation, et si et comment je peux vous accompagner concrètement.</p>
+    <div class="final-act">
+      <a class="btn btn-main" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=final" target="_blank" rel="noopener">Obtenir mon score sur 100</a>
+      <a class="alt-link" href="https://calendar.app.google/hwBwE5MaJsVtgB9d8" target="_blank" rel="noopener">ou échanger directement (30 min, gratuit)</a>
+    </div>
+    <ul class="reassure">
+      <li>Premier contact sans engagement</li>
+      <li>17 questions, résultat par email</li>
+      <li>Sans six mois de diagnostic</li>
+      <li>Échange de 30 minutes, gratuit</li>
+    </ul>
+  </div>
+</div></section>
+
+<section class="alt" id="faq"><div class="wrap">
+  <div class="sec-head"><h2>Questions fréquentes</h2></div>
+  <div class="faq">
+    <details><summary>Quel est le prix ?</summary><p>Sur mesure, selon la taille de votre entreprise et la valeur visée dans la roadmap.</p></details>
+    <details><summary>Quelle est la durée de l'accompagnement ?</summary><p>Elle suit la roadmap et le niveau d'accompagnement que vous souhaitez.</p></details>
+    <details><summary>Quel temps de collaboration prévoir ?</summary><p>Il dépend de l'ampleur du travail.</p></details>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Axel Brunon, COO externalisé pour dirigeants de PME</span>
+  <span class="foot-links"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="https://www.youtube.com/@axel.brunon" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/axel_brunon_biz/" target="_blank" rel="noopener">Instagram</a><span>axelbrunon@gmail.com</span></span>
+</div></footer>
+
+<div class="dock" id="dock" hidden><a class="btn btn-main" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=barre-mobile" target="_blank" rel="noopener">Faire mon diagnostic en 5 min</a></div>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function clamp(v) { return v < 0 ? 0 : v > 1 ? 1 : v; }
+  function ease(t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+
+  /* profondeur : parallaxe des halos et de la grille */
+  (function () { if (reduce) return;
+    var orbs = [].slice.call(document.querySelectorAll('.depth .orb')), floor = document.querySelector('.depth .floor'), mx = 0, my = 0, ticking = false;
+    function upd() { ticking = false; var y = window.scrollY;
+      orbs.forEach(function (o) { var s = parseFloat(o.dataset.s); o.style.transform = 'translate3d(' + (mx * s * 60) + 'px,' + (-y * s + my * s * 40) + 'px,0)'; });
+      if (floor) floor.style.transform = 'perspective(600px) rotateX(62deg) translateY(' + ((y * .25) % 64) + 'px)'; }
+    function req() { if (!ticking) { ticking = true; requestAnimationFrame(upd); } }
+    window.addEventListener('scroll', req, { passive: true });
+    if (window.matchMedia('(pointer: fine)').matches) window.addEventListener('pointermove', function (e) { mx = e.clientX / window.innerWidth - .5; my = e.clientY / window.innerHeight - .5; req(); }, { passive: true });
+    upd(); })();
+
+  /* hero : les sujets en vrac se rangent en six priorités au défilement */
+  (function () {
+    var dims = [
+      ["Vision", ["Ambition", "Cap à 3 ans", "Feuille de route"]],
+      ["Humain", ["Recrutement", "Alignement", "Gestion"]],
+      ["Données", ["Tableau de bord", "Aide à la décision", "KPI"]],
+      ["Gestion des problèmes", ["Capture des incidents", "Sélection", "Actions"]],
+      ["Process", ["Process clés", "Automatisation & IA", "Mise en place"]],
+      ["Suivi de l'exécution", ["Hebdo", "Mensuel", "Trimestriel"]]
+    ];
+    var stage = document.getElementById('stage'), bins = document.getElementById('bins'), count = document.getElementById('count'), hint = document.getElementById('hint');
+    var hero = document.getElementById('hero'), pin = hero.querySelector('.hero-pin'), l2 = hero.querySelector('.l2');
+    var tasks = [];
+    dims.forEach(function (d) {
+      var bin = document.createElement('div'); bin.className = 'bin';
+      var h = document.createElement('h3'); h.textContent = d[0]; bin.appendChild(h);
+      var slots = document.createElement('div'); slots.className = 'slots'; bin.appendChild(slots);
+      d[1].forEach(function (t) { var el = document.createElement('span'); el.className = 'task'; el.innerHTML = '<i></i>'; el.appendChild(document.createTextNode(t)); slots.appendChild(el); tasks.push({ el: el }); });
+      bins.appendChild(bin);
+    });
+    var n = tasks.length;
+    function rnd(i) { var x = Math.sin(i * 999 + 7) * 10000; return x - Math.floor(x); }
+    /* ordre de rangement mélangé pour que les sujets ne partent pas case par case */
+    var order = tasks.map(function (_, i) { return i; }).sort(function (a, b) { return rnd(a + 50) - rnd(b + 50); });
+    order.forEach(function (k, rank) { tasks[k].delay = rank / n * .45; });
+
+    function layout() {
+      var W = stage.clientWidth, H = stage.clientHeight, top = bins.offsetTop;
+      tasks.forEach(function (t, i) {
+        var w = t.el.offsetWidth, h = t.el.offsetHeight;
+        var sx = 10 + rnd(i) * Math.max(0, W - w - 20), sy = top + rnd(i + 100) * Math.max(0, H - top - h - 12);
+        t.dx = sx - t.el.offsetLeft; t.dy = sy - t.el.offsetTop; t.r = (rnd(i + 200) - .5) * 30;
+      });
+    }
+    var last = -1;
+    function render(p) {
+      if (p === last) return; last = p;
+      var left = 0;
+      tasks.forEach(function (t) {
+        var e = ease(clamp((p - t.delay) / .55)), k = 1 - e;
+        t.el.style.transform = k ? 'translate(' + (t.dx * k).toFixed(1) + 'px,' + (t.dy * k).toFixed(1) + 'px) rotate(' + (t.r * k).toFixed(1) + 'deg)' : '';
+        var done = e > .98; t.el.classList.toggle('done', done); if (!done) left++;
+      });
+      stage.style.setProperty('--p', p.toFixed(3));
+      stage.classList.toggle('sorted', left === 0);
+      l2.style.setProperty('--lit', (.5 + .5 * clamp(p * 1.4)).toFixed(3));
+      count.innerHTML = left ? '<b>' + left + '</b>sujets en vrac' : '<b>6</b>priorités claires';
+      hint.hidden = p > .08;
+    }
+    if (reduce) { render(1); return; }
+
+    var auto = 0, autoStart = 0, raf = 0;
+    function scrollP() {
+      var pinned = getComputedStyle(pin).position === 'sticky';
+      var dist = pinned ? (hero.offsetHeight - pin.offsetHeight) * .8 : 380;
+      return clamp(window.scrollY / Math.max(1, dist));
+    }
+    function frame() { raf = 0; render(Math.max(scrollP(), auto)); }
+    function req() { if (!raf) raf = requestAnimationFrame(frame); }
+    /* si le visiteur ne défile pas, la scène se range seule au bout de quelques secondes */
+    var idle = setTimeout(function () {
+      if (window.scrollY > 0) return;
+      autoStart = performance.now();
+      (function step(now) { auto = clamp((now - autoStart) / 2200); req(); if (auto < 1) requestAnimationFrame(step); })(autoStart);
+    }, 3200);
+    window.addEventListener('scroll', function () { clearTimeout(idle); req(); }, { passive: true });
+    window.addEventListener('resize', function () { layout(); last = -1; req(); });
+    layout(); render(scrollP());
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { layout(); last = -1; req(); });
+  })();
+
+  /* chiffres qui défilent à l'apparition */
+  (function () {
+    var els = [].slice.call(document.querySelectorAll('[data-count]'));
+    if (reduce || !('IntersectionObserver' in window)) return;
+    els.forEach(function (el) { el.textContent = '0'; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (!en.isIntersecting) return; io.unobserve(en.target);
+        var el = en.target, to = +el.dataset.count, t0 = performance.now();
+        (function step(now) { var t = clamp((now - t0) / 1400); el.textContent = Math.round(to * ease(t)); if (t < 1) requestAnimationFrame(step); })(t0);
+      });
+    }, { threshold: .6 });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
+  /* méthode : le fil se remplit au défilement */
+  (function () {
+    var track = document.getElementById('track'), fill = document.getElementById('stepfill');
+    var lis = [].slice.call(track.querySelectorAll('li')), tk = false;
+    function upd() { tk = false; var r = track.getBoundingClientRect(), mark = window.innerHeight * .6 - r.top;
+      fill.style.setProperty('--h', Math.max(0, Math.min(track.offsetHeight - 38, mark - 19)) + 'px');
+      lis.forEach(function (li) { li.classList.toggle('on', li.offsetTop <= mark); }); }
+    window.addEventListener('scroll', function () { if (!tk) { tk = true; requestAnimationFrame(upd); } }, { passive: true });
+    window.addEventListener('resize', upd); upd();
+  })();
+
+  /* ça a du sens si */
+  (function () {
+    var boxes = document.querySelectorAll('.fit input'), msg = document.getElementById('fit-msg'), cta = document.getElementById('fit-cta');
+    function upd() {
+      var n = 0; boxes.forEach(function (b) { if (b.checked) n++; });
+      cta.hidden = n === 0;
+      msg.textContent = n === 0 ? '' : (n === 1 ? 'Une situation sur trois vous ressemble.' : n + ' situations sur trois vous ressemblent.');
+    }
+    boxes.forEach(function (b) { b.addEventListener('change', upd); });
+    upd();
+  })();
+
+  /* témoignages : repliés à cinq lignes */
+  document.querySelectorAll('.quote').forEach(function (q) {
+    var bq = q.querySelector('blockquote'), btn = q.querySelector('.more');
+    bq.classList.add('clamp');
+    if (bq.scrollHeight <= bq.clientHeight + 2) { bq.classList.remove('clamp'); return; }
+    btn.hidden = false;
+    btn.addEventListener('click', function () { bq.classList.remove('clamp'); btn.hidden = true; btn.setAttribute('aria-expanded', 'true'); });
+  });
+
+  /* diagnostic : jauge de score et profils */
+  (function () {
+    var profiles = [
+      ["L'entreprise tourne autour de vous", "Vous êtes partout parce que vous avez toujours été la solution la plus fiable. Cela a un coût : votre temps, votre énergie, et la capacité de votre entreprise à grandir sans vous."],
+      ["Des bases, mais trop de dépendances", "Vous n'êtes pas au point de départ. Vous avez construit une équipe, des habitudes, peut-être quelques process. Vous sentez que ça coince encore et que vous portez trop."],
+      ["Organisation en construction", "Votre entreprise a une structure, des repères, une équipe qui commence à fonctionner de manière autonome. Il reste quelques angles morts, et ce sont souvent des détails qui font la différence."],
+      ["Entreprise autonome", "Vous avez construit une entreprise qui tourne avec des process, des indicateurs, une équipe alignée. Vous pilotez."]
+    ];
+    var scores = [32, 54, 76, 93];
+    var bands = document.querySelectorAll('.band'), prof = document.getElementById('profile');
+    var num = document.getElementById('score-n'), wrap = document.getElementById('scale-wrap'), cur = 32, anim = 0;
+    function show(v) { num.textContent = Math.round(v); wrap.style.setProperty('--s', v + '%'); }
+    function go(to, dur) {
+      cancelAnimationFrame(anim);
+      if (reduce) { cur = to; show(to); return; }
+      var from = cur, t0 = performance.now();
+      (function step(now) { var t = clamp((now - t0) / dur); cur = from + (to - from) * ease(t); show(cur); if (t < 1) anim = requestAnimationFrame(step); })(t0);
+    }
+    bands.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var i = +b.getAttribute('data-i'), p = profiles[i];
+        bands.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+        prof.innerHTML = '<h3></h3><p></p>';
+        prof.firstChild.textContent = p[0]; prof.lastChild.textContent = p[1];
+        go(scores[i], 700);
+      });
+    });
+    if (!reduce && 'IntersectionObserver' in window) {
+      cur = 0; show(0);
+      var io = new IntersectionObserver(function (e) { if (e[0].isIntersecting) { io.disconnect(); go(32, 1500); } }, { threshold: .5 });
+      io.observe(document.getElementById('gauge'));
+    }
+  })();
+
+  /* barre mobile : seulement quand ni le bouton du hero ni le bloc diagnostic ne sont visibles */
+  (function () {
+    var dock = document.getElementById('dock'), heroIn = true, endIn = false;
+    function dk() { dock.hidden = heroIn || endIn; }
+    if (!('IntersectionObserver' in window)) return;
+    new IntersectionObserver(function (e) { heroIn = e[0].isIntersecting; dk(); }).observe(document.getElementById('hero-cta'));
+    new IntersectionObserver(function (e) { endIn = e[0].isIntersecting; dk(); }).observe(document.getElementById('diagnostic'));
+  })();
+})();
+</script>
+
+</body>
+</html>
