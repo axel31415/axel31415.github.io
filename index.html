@@ -273,6 +273,16 @@ section { padding-block: clamp(56px, 8vw, 96px); }
 @media (max-width: 860px) { .final-box { grid-template-columns: 1fr; grid-template-areas: "intro" "gauge" "next" "act" "reassure"; } }
 @media (max-width: 480px) { .final-box { padding: 26px 18px; } .band { padding: 10px 2px; font-size: .78rem; } .gauge { padding: 14px; } }
 
+/* derniers articles du blog (section générée par blog/build.py) */
+.blog-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 20px; }
+.blog-cards .card { display: flex; flex-direction: column; gap: 10px; padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: color-mix(in srgb, var(--surface) 70%, transparent); text-decoration: none; transition: border-color .2s, transform .2s; }
+.blog-cards .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.blog-cards .meta { font-size: .85rem; color: var(--mute); }
+.blog-cards h3 { font-size: 1.25rem; line-height: 1.25; }
+.blog-cards p { font-size: .97rem; }
+.blog-cards .more { margin-top: auto; color: var(--accent); font-weight: 500; font-size: .95rem; }
+.sec-head p a { color: var(--accent); text-underline-offset: 3px; }
+
 /* questions fréquentes */
 .faq { max-width: 760px; }
 .faq details { border-top: 1px solid var(--line); }
@@ -312,6 +322,7 @@ footer a { text-underline-offset: 3px; }
     <a href="#qui-je-suis">Qui je suis</a>
     <a href="#methode">Méthode</a>
     <a href="#diagnostic">Diagnostic</a>
+    <a href="/blog/">Blog</a>
   </nav>
   <a class="btn btn-main btn-sm" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=nav" target="_blank" rel="noopener">Faire le diagnostic</a>
 </div></header>
@@ -464,6 +475,8 @@ footer a { text-underline-offset: 3px; }
   </div>
 </div></section>
 
+<!-- blog:debut --><!-- blog:fin -->
+
 <section class="alt" id="faq"><div class="wrap">
   <div class="sec-head"><h2>Questions fréquentes</h2></div>
   <div class="faq">
@@ -476,7 +489,7 @@ footer a { text-underline-offset: 3px; }
 
 <footer><div class="wrap">
   <span>Axel Brunon, COO externalisé pour dirigeants de PME</span>
-  <span class="foot-links"><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="https://www.youtube.com/@axel.brunon" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/axel_brunon_biz/" target="_blank" rel="noopener">Instagram</a><a href="mailto:contact@axelbrunon.fr">contact@axelbrunon.fr</a></span>
+  <span class="foot-links"><a href="/blog/">Blog</a><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Confidentialité</a><a href="https://www.youtube.com/@axel.brunon" target="_blank" rel="noopener">YouTube</a><a href="https://www.instagram.com/axel_brunon_biz/" target="_blank" rel="noopener">Instagram</a><a href="mailto:contact@axelbrunon.fr">contact@axelbrunon.fr</a></span>
 </div></footer>
 
 <div class="dock" id="dock" hidden><a class="btn btn-main" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=barre-mobile" target="_blank" rel="noopener">Faire mon diagnostic en 5 min</a></div>
