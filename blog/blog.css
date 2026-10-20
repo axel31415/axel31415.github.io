@@ -105,6 +105,17 @@ img { max-width: 100%; height: auto; }
 .prose code { font-size: .9em; background: var(--surface-2); padding: 2px 6px; border-radius: 6px; }
 .prose .encadre { padding: 18px 22px; border: 1px solid var(--line); border-radius: 14px; background: color-mix(in srgb, var(--surface) 70%, transparent); }
 
+/* tableaux en cartes sur téléphone : une ligne = un bloc, chaque valeur précédée de l'intitulé de sa colonne */
+@media (max-width: 600px) {
+  .prose table, .prose tbody, .prose tr, .prose td { display: block; width: 100%; }
+  .prose thead { display: none; }
+  .prose tr { padding: 14px 16px; margin-bottom: 12px; border: 1px solid var(--line); border-radius: 14px; background: color-mix(in srgb, var(--surface) 70%, transparent); }
+  .prose td { padding: 4px 0; border: 0; }
+  .prose td::before { content: attr(data-label); display: block; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
+  .prose td:first-child { color: var(--ink); font-weight: 600; }
+  .prose td:first-child::before { display: none; }
+}
+
 /* appel à l'action et auteur en fin d'article */
 .post-cta { margin-block: 48px 0; padding: clamp(24px, 4vw, 36px); border: 1px solid var(--accent); border-radius: 20px; background: color-mix(in srgb, var(--surface) 75%, transparent); display: grid; gap: 14px; justify-items: start; }
 .post-cta h2 { font-size: clamp(1.4rem, 3vw, 1.8rem); line-height: 1.2; }
