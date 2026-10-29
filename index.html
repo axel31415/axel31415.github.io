@@ -165,7 +165,9 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .reframe .promise { margin-top: 10px; padding: 22px 26px; border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; background: var(--bg); font-size: 1rem; color: var(--mute); }
 .reframe .promise b { display: block; font-family: var(--font-display); font-size: clamp(1.35rem, 1.15rem + .8vw, 1.75rem); line-height: 1.3; color: var(--ink); font-weight: 600; margin-top: 6px; }
 
-/* volets */
+/* volets : cartes nuit, posées sur la section crème */
+#offres .volet { --bg: #0d1924; --line: #1f3447; --ink: #f2f2f0; --soft: #c3cdd6; --mute: #8d9aa8; --accent: #38b6ff; color: var(--ink); }
+
 .volets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .volet { display: flex; flex-direction: column; padding: 28px; border-radius: 16px; background: var(--bg); border: 1px solid var(--line); text-decoration: none; transition: border-color .15s, transform .15s; }
 .volet a.more { text-decoration: none; }
@@ -358,7 +360,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 </section>
 
 <!-- 2. Barre de preuve : est-ce sérieux ? -->
-<section class="proof band" aria-label="Preuves">
+<section class="proof fond-creme" aria-label="Preuves">
   <div class="wrap">
     <blockquote>« Grâce à lui, nous avons gagné en productivité, en visibilité sur nos projets, et en efficacité globale. »<cite>Nicolas, CEO de Codaza, client</cite></blockquote>
     <dl class="stats">
@@ -439,7 +441,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 </section>
 
 <!-- 6. La solution : trois volets -->
-<section id="offres" class="fond-nuit">
+<section id="offres" class="fond-creme">
   <div class="wrap">
     <div class="head-block">
       <span class="eyebrow">La solution</span>
@@ -471,7 +473,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 </section>
 
 <!-- 7. La méthode -->
-<section id="methode" class="fond-creme">
+<section id="methode" class="fond-nuit">
   <div class="wrap">
     <div class="head-block">
       <span class="eyebrow">Comment ça se passe</span>
