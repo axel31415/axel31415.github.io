@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>COO externalisé, bras droit à temps partagé | Axel Brunon</title>
+<title>Bras droit | COO externalisé | Axel Brunon</title>
 <meta name="description" content="COO externalisé : j'installe l'organisation qui permet à ta boîte de grandir de façon rentable, avec une équipe autonome. Partout en France.">
 <link rel="canonical" href="https://axelbrunon.fr/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="COO externalisé, bras droit à temps partagé | Axel Brunon">
+<meta property="og:title" content="Bras droit | COO externalisé | Axel Brunon">
 <meta property="og:description" content="COO externalisé : j'installe l'organisation qui permet à ta boîte de grandir de façon rentable, avec une équipe autonome. Partout en France.">
 <meta property="og:url" content="https://axelbrunon.fr/">
-<meta property="og:image" content="https://axelbrunon.fr/img/og-bras-droit.jpg">
+<meta property="og:image" content="https://axelbrunon.fr/img/og-coo-externalise.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -20,7 +20,7 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="preload" href="fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Axel Brunon, bras droit à temps partagé","description":"COO externalisé : j'installe l'organisation qui permet à ta boîte de grandir de façon rentable, avec une équipe autonome. Partout en France.","url":"https://axelbrunon.fr/","image":"https://axelbrunon.fr/img/og-bras-droit.jpg","founder":{"@type":"Person","name":"Axel Brunon","jobTitle":"COO externalisé"},"sameAs":["https://www.linkedin.com/in/axel-brunon-pilotage-d-entreprise/","https://www.youtube.com/@axel.brunon","https://www.instagram.com/axel_brunon_biz/"],"alternateName":["Bras droit à temps partagé","COO à temps partagé","Fractional COO","Directeur des opérations externalisé"],"areaServed":{"@type":"Country","name":"France"},"address":{"@type":"PostalAddress","streetAddress":"Chemin du Mouillon","postalCode":"69420","addressLocality":"Trèves","addressRegion":"Auvergne-Rhône-Alpes","addressCountry":"FR"},"email":"contact@axelbrunon.fr","slogan":"Un bras droit à temps partagé, pour les entreprises trop petites pour en recruter un."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Axel Brunon, bras droit et COO externalisé","description":"COO externalisé : j'installe l'organisation qui permet à ta boîte de grandir de façon rentable, avec une équipe autonome. Partout en France.","url":"https://axelbrunon.fr/","image":"https://axelbrunon.fr/img/og-coo-externalise.jpg","founder":{"@type":"Person","name":"Axel Brunon","jobTitle":"COO externalisé"},"sameAs":["https://www.linkedin.com/in/axel-brunon-pilotage-d-entreprise/","https://www.youtube.com/@axel.brunon","https://www.instagram.com/axel_brunon_biz/"],"alternateName":["Bras droit du dirigeant","COO freelance","Fractional COO","Directeur des opérations externalisé"],"areaServed":{"@type":"Country","name":"France"},"address":{"@type":"PostalAddress","streetAddress":"Chemin du Mouillon","postalCode":"69420","addressLocality":"Trèves","addressRegion":"Auvergne-Rhône-Alpes","addressCountry":"FR"},"email":"contact@axelbrunon.fr","slogan":"Bras droit | COO externalisé"}</script>
 <!-- Mesure d'audience : coller ici le script de l'outil choisi (Plausible ou Matomo en mode exempté). Préférer un outil sans cookie pour éviter un bandeau de consentement. -->
 <style>
 @font-face{font-family:'Fraunces';font-style:normal;font-weight:400;font-display:swap;src:url(fonts/fraunces-latin-400-normal.woff2) format('woff2')}
@@ -129,7 +129,11 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .hero-text { padding-bottom: clamp(56px, 7vw, 96px); }
 .hero h1 { font-size: clamp(2.2rem, 1.3rem + 3.4vw, 3.7rem); line-height: 1.08; max-width: 17ch; }
 .hero-sub { font-size: clamp(1.1rem, 1rem + .4vw, 1.3rem); color: var(--soft); max-width: 46ch; margin: 22px 0 34px; }
-.hero-photo { align-self: end; justify-self: center; width: min(100%, 380px); }
+.hero-photo { position: relative; align-self: end; justify-self: center; width: min(100%, 380px); }
+.photo-tag { position: absolute; right: 74%; top: 2%; z-index: 2; margin: 0; display: flex; align-items: flex-start; pointer-events: none; }
+.photo-tag span { font: 600 1.2rem var(--font-body); white-space: nowrap; color: var(--ink); padding: 10px 18px; border: 2px solid var(--accent); border-radius: 999px; background: color-mix(in srgb, var(--bg) 88%, transparent); }
+.photo-tag span b { color: var(--accent); font-weight: 600; margin-inline: 4px; }
+.photo-tag svg { flex: none; width: 92px; height: 70px; margin: 24px 0 0 -4px; color: var(--accent); }
 .hero-photo img { filter: drop-shadow(0 18px 40px rgba(0,0,0,.35)); }
 
 /* barre de preuve */
@@ -281,7 +285,10 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 @media (max-width: 960px) {
   .hero .wrap { grid-template-columns: 1fr; gap: 0; }
   .hero-text { padding-bottom: 8px; }
-  .hero-photo { width: min(78%, 320px); }
+  .hero-photo { width: min(78%, 320px); margin-top: 48px; }
+  .photo-tag { right: auto; left: -20%; top: -2%; flex-direction: column; align-items: flex-start; }
+  .photo-tag span { font-size: 1rem; padding: 8px 14px; }
+  .photo-tag svg { width: 70px; height: 54px; margin: 2px 0 0 96px; }
   .proof .wrap, .diag, .about, .cta-final .box { grid-template-columns: 1fr; }
   .volets, .posts { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; gap: 26px; }
@@ -313,7 +320,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 
 <header class="site-head" id="top">
   <div class="wrap">
-    <a class="brand" href="/"><span><b>Axel Brunon</b><small>Bras droit à temps partagé</small></span></a>
+    <a class="brand" href="/"><span><b>Axel Brunon</b><small>Bras droit | COO externalisé</small></span></a>
     <nav aria-label="Menu principal">
       <ul class="menu" id="menu">
         <li><a href="#offres">Accompagnement</a></li>
@@ -335,8 +342,8 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
   <div class="wrap">
     <div class="hero-text">
       <span class="eyebrow">Pour les chefs d'entreprise qui portent tout seuls</span>
-      <h1>Un bras droit à temps partagé, pour les entreprises trop petites pour en recruter un.</h1>
-      <p class="hero-sub">Tu portes ta boîte seul et tout passe par toi : je t'aide à la structurer pour qu'elle dépende moins de toi.</p>
+      <h1>Tu portes ta boîte seul et tout passe par toi ?</h1>
+      <p class="hero-sub">Je t'aide à la structurer pour qu'elle dépende moins de toi.</p>
       <div class="actions">
         <a class="btn btn-main" href="https://calendar.app.google/XDpeHXV7bzomEqcf6" target="_blank" rel="noopener">Réserver un échange de 30 min</a>
         <a class="link-alt" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=hero" target="_blank" rel="noopener">Faire mon diagnostic en 5 min</a>
@@ -344,6 +351,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
     </div>
     <div class="hero-photo">
       <img src="img/axel-hero.webp" srcset="img/axel-hero.webp 322w, img/axel-hero@2x.webp 645w" sizes="(max-width: 960px) 320px, 380px" width="322" height="541" alt="Axel Brunon, debout, bras croisés, souriant face à l'objectif" fetchpriority="high">
+      <p class="photo-tag"><span>Bras droit<b>|</b>COO freelance</span><svg viewBox="0 0 92 70" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8 C 34 4, 70 18, 82 58"/><path d="M70 50 L 82 60 L 88 45"/></svg></p>
     </div>
   </div>
 </section>
@@ -549,7 +557,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
     <div class="faq">
       <details><summary>Combien ça coûte ?</summary><div>
         <table>
-          <tr><td>Accompagnement bras droit à temps partagé</td><td>160 € / heure</td></tr>
+          <tr><td>Accompagnement COO externalisé</td><td>160 € / heure</td></tr>
           <tr><td>Atelier</td><td>à partir de 800 € la demi-journée</td></tr>
           <tr><td>Process automatisé et IA clé en main</td><td>à partir de 1 000 €</td></tr>
           <tr><td>Échange de découverte</td><td>30 min, gratuit</td></tr>
@@ -628,7 +636,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="/"><img src="img/axel-avatar.webp" width="36" height="36" alt=""><span><b>Axel Brunon</b><small>Bras droit à temps partagé</small></span></a>
+        <a class="brand" href="/"><img src="img/axel-avatar.webp" width="36" height="36" alt=""><span><b>Axel Brunon</b><small>Bras droit | COO externalisé</small></span></a>
         <p>Basé près de Lyon. J'interviens partout en France, sur place ou à distance.</p>
       </div>
       <div><h4>Accompagnement</h4><ul>
