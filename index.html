@@ -75,8 +75,8 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .fond-creme {
   background: linear-gradient(180deg, #f4efe6, #eae3d6);
   --bg: #fbf8f2; --surface: #fbf8f2; --surface-2: #efe8db; --line: #dcd2c1;
-  --ink: #1a110c; --soft: #4a3f37; --mute: #75695e;
-  --accent: #d95f00; --action: #d95f00; --action-hover: #b84f00; --on-action: #ffffff; color-scheme: light;
+  --ink: #1a110c; --soft: #4a3f37; --mute: #6a5e53;
+  --accent: #a84600; --action: #a84600; --action-hover: #8a3900; --on-action: #ffffff; color-scheme: light;
 }
 .fond-nuit {
   background: linear-gradient(180deg, #0a1219, #10202e);
@@ -94,8 +94,6 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .lede { color: var(--soft); font-size: 1.125rem; max-width: 62ch; margin-top: 16px; }
 .head-block { max-width: 760px; margin-bottom: 40px; }
 
-/* emplacements à fournir : bien visibles, sans couleur vive */
-.todo { display: inline-block; font: 500 .82rem/1.4 ui-monospace, Consolas, monospace; color: var(--accent); border: 1px dashed var(--accent); border-radius: 6px; padding: 3px 8px; }
 
 /* boutons : un seul bouton plein, orange */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 12px 22px; border-radius: 10px; font: 600 1rem/1.2 var(--font-body); text-decoration: none; transition: background .15s, border-color .15s; cursor: pointer; }
@@ -117,14 +115,10 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .brand small { color: var(--mute); font-size: .78rem; }
 .menu { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
 .menu > li { position: relative; }
-.menu a, .menu button { display: block; padding: 8px 12px; border-radius: 8px; font: 500 1.05rem var(--font-body); color: var(--soft); text-decoration: none; background: none; border: 0; cursor: pointer; }
-.menu a:hover, .menu button:hover, .menu button[aria-expanded="true"] { color: var(--ink); background: var(--surface-2); }
-.menu button::after { content: ""; display: inline-block; width: 6px; height: 6px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); margin: 0 0 3px 8px; }
-.sub { position: absolute; top: calc(100% + 8px); left: 0; min-width: 250px; list-style: none; margin: 0; padding: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 16px 40px rgba(0,0,0,.25); }
-.sub a { padding: 9px 12px; }
-.sub .sep { border-top: 1px solid var(--line); margin: 6px 4px; }
+.menu a { display: block; padding: 8px 12px; border-radius: 8px; font: 500 1.05rem var(--font-body); color: var(--soft); text-decoration: none; background: none; border: 0; cursor: pointer; }
+.menu a:hover { color: var(--ink); background: var(--surface-2); }
 .site-head .btn { min-height: 42px; padding: 9px 16px; font-size: .95rem; white-space: nowrap; }
-.menu a, .menu button, .brand small { white-space: nowrap; }
+.menu a, .brand small { white-space: nowrap; }
 .burger { display: none; }
 
 /* hero */
@@ -186,7 +180,6 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .steps li:last-child::after { display: none; }
 .steps h3 { font-size: 1.15rem; margin-top: 18px; }
 .steps p { color: var(--soft); font-size: .97rem; margin-top: 8px; }
-.method-note { margin-top: 36px; color: var(--soft); max-width: 70ch; }
 
 /* pour qui */
 .fit { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -284,12 +277,8 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
   .menu, .site-head .btn { display: none; }
   .burger { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--line); background: none; color: var(--ink); }
   .site-head.open .menu { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: var(--head); left: 0; right: 0; padding: 12px 16px 20px; background: var(--bg); border-bottom: 1px solid var(--line); }
-  .site-head.open .sub { position: static; box-shadow: none; border: 0; padding: 0 0 0 12px; background: none; }
 }
 @media (max-width: 960px) {
-  .burger { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; border: 1px solid var(--line); background: none; color: var(--ink); }
-  .site-head.open .menu { display: flex; flex-direction: column; align-items: stretch; position: absolute; top: var(--head); left: 0; right: 0; padding: 12px 16px 20px; background: var(--bg); border-bottom: 1px solid var(--line); }
-  .site-head.open .sub { position: static; box-shadow: none; border: 0; padding: 0 0 0 12px; background: none; }
   .hero .wrap { grid-template-columns: 1fr; gap: 0; }
   .hero-text { padding-bottom: 8px; }
   .hero-photo { width: min(78%, 320px); }
@@ -446,7 +435,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
     <div class="head-block">
       <span class="eyebrow">La solution</span>
       <h2>Une boîte qui grandit de façon rentable, avec une équipe autonome</h2>
-      <p class="lede">J'installe l'organisation qui le permet. Je travaille avec toi, sur tes vrais dossiers, et je reste après la mission.</p>
+      <p class="lede">J'installe l'organisation qui le permet. Je travaille avec toi, et t'accompagne jusqu'au succès.</p>
     </div>
     <div class="volets">
       <div class="volet">
