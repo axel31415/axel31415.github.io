@@ -69,6 +69,27 @@ p { margin: 0; }
 .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
 section { padding: clamp(64px, 8vw, 104px) 0; }
 .band { background: var(--surface); border-block: 1px solid var(--line); }
+/* fonds alternés, repris des posts Instagram : crème pour respirer, nuit pour les listes, orange une seule fois.
+   --bg sert de fond aux cartes posées dans la section. */
+.fond-creme, .fond-nuit, .fond-orange { color: var(--ink); border-block: 0; }
+.fond-creme {
+  background: linear-gradient(180deg, #f4efe6, #eae3d6);
+  --bg: #fbf8f2; --surface: #fbf8f2; --surface-2: #efe8db; --line: #dcd2c1;
+  --ink: #1a110c; --soft: #4a3f37; --mute: #75695e;
+  --accent: #d95f00; --action: #d95f00; --action-hover: #b84f00; --on-action: #ffffff; color-scheme: light;
+}
+.fond-nuit {
+  background: linear-gradient(180deg, #0a1219, #10202e);
+  --bg: #0d1924; --surface: #0d1924; --surface-2: #14283a; --line: #1f3447;
+  --ink: #f2f2f0; --soft: #c3cdd6; --mute: #8d9aa8;
+  --accent: #38b6ff; --action: #fe7e01; --action-hover: #feae3f; --on-action: #1a0d00; color-scheme: dark;
+}
+.fond-orange {
+  background: #ff8c1a;
+  --bg: #ff9a36; --surface: #ff9a36; --surface-2: #ffa64d; --line: rgba(16,11,8,.22);
+  --ink: #100b08; --soft: #2a1a0c; --mute: #4a2e14;
+  --accent: #100b08; --action: #100b08; --action-hover: #2e2119; --on-action: #ffffff; color-scheme: light;
+}
 .eyebrow { display: block; font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
 .lede { color: var(--soft); font-size: 1.125rem; max-width: 62ch; margin-top: 16px; }
 .head-block { max-width: 760px; margin-bottom: 40px; }
@@ -92,11 +113,11 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .site-head .wrap { height: 100%; display: flex; align-items: center; gap: 28px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; }
 .brand img { width: 36px; height: 36px; border-radius: 50%; }
-.brand b { font-family: var(--font-display); font-size: 1.1rem; display: block; line-height: 1.1; }
+.brand b { font-family: var(--font-display); font-size: 1.2rem; display: block; line-height: 1.1; }
 .brand small { color: var(--mute); font-size: .78rem; }
 .menu { display: flex; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
 .menu > li { position: relative; }
-.menu a, .menu button { display: block; padding: 8px 12px; border-radius: 8px; font: 500 .95rem var(--font-body); color: var(--soft); text-decoration: none; background: none; border: 0; cursor: pointer; }
+.menu a, .menu button { display: block; padding: 8px 12px; border-radius: 8px; font: 500 1.05rem var(--font-body); color: var(--soft); text-decoration: none; background: none; border: 0; cursor: pointer; }
 .menu a:hover, .menu button:hover, .menu button[aria-expanded="true"] { color: var(--ink); background: var(--surface-2); }
 .menu button::after { content: ""; display: inline-block; width: 6px; height: 6px; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg); margin: 0 0 3px 8px; }
 .sub { position: absolute; top: calc(100% + 8px); left: 0; min-width: 250px; list-style: none; margin: 0; padding: 8px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 16px 40px rgba(0,0,0,.25); }
@@ -128,27 +149,21 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .stats dt { color: var(--soft); font-size: .92rem; margin-top: 8px; line-height: 1.4; }
 .stats div { display: flex; flex-direction: column-reverse; justify-content: flex-end; }
 
-/* phrases cochables */
-.phrases { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
-.phrase { position: relative; display: flex; gap: 14px; align-items: flex-start; padding: 20px 22px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); cursor: pointer; transition: border-color .15s, background .15s; }
-.phrase:hover { border-color: var(--soft); }
-.phrase input { position: absolute; opacity: 0; }
-.phrase .box { flex: none; width: 22px; height: 22px; margin-top: 3px; border: 1.5px solid var(--mute); border-radius: 6px; display: grid; place-items: center; }
-.phrase .box::after { content: ""; width: 10px; height: 6px; border: solid var(--bg); border-width: 0 0 2px 2px; transform: rotate(-45deg) translate(1px,-1px); opacity: 0; }
-.phrase input:checked ~ .box { background: var(--accent); border-color: var(--accent); }
-.phrase input:checked ~ .box::after { opacity: 1; }
-.phrase:has(input:checked) { border-color: var(--accent); background: var(--surface-2); }
-.phrase input:focus-visible ~ .box { outline: 2px solid var(--accent); outline-offset: 3px; }
-.phrase span:last-child { font-family: var(--font-display); font-size: 1.15rem; line-height: 1.35; }
-.reco { margin-top: 26px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; padding: 22px 24px; border-radius: 14px; border: 1px solid var(--line); background: var(--surface-2); }
-.reco p { font-size: 1.15rem; font-weight: 500; }
+/* phrases du constat */
+.phrases { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0; }
+.phrases li { padding: 22px 26px; border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: 14px; background: var(--surface); font-size: 1.2rem; font-weight: 500; line-height: 1.5; color: var(--ink); }
 
-/* recadrage : bloc texte large, sans carte */
-.reframe-text { display: grid; gap: 1.1em; max-width: 36em; font-family: var(--font-display); font-weight: 400; font-size: clamp(1.25rem, 1.05rem + .8vw, 1.7rem); line-height: 1.6; }
-.reframe-text p:last-child { color: var(--ink); font-weight: 600; }
-.reframe-text p:not(:last-child) { color: var(--soft); }
-.reframe .promise { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); max-width: 34em; font-size: 1.15rem; color: var(--soft); }
-.reframe .promise b { display: block; font-family: var(--font-display); font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem); color: var(--ink); font-weight: 600; margin-top: 6px; }
+/* recadrage : la liste à gauche, la suite à droite */
+.reframe-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+.reframe-lead { font-family: var(--font-display); font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem); font-weight: 600; line-height: 1.2; }
+.reframe-list { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 12px; }
+.reframe-list li { position: relative; padding: 14px 18px 14px 44px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); font-size: 1.15rem; font-weight: 500; line-height: 1.4; }
+.reframe-list li::before { content: ""; position: absolute; left: 18px; top: 50%; width: 10px; height: 10px; margin-top: -5px; border-radius: 3px; background: var(--accent); }
+.reframe-big { margin-top: 22px; font-family: var(--font-display); font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.4rem); font-weight: 600; line-height: 1.15; color: var(--accent); }
+.reframe-body { display: grid; gap: 22px; font-size: 1.2rem; line-height: 1.6; color: var(--soft); }
+.reframe-body .strong { color: var(--ink); font-weight: 600; font-size: 1.3rem; line-height: 1.5; }
+.reframe .promise { margin-top: 10px; padding: 22px 26px; border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0; background: var(--bg); font-size: 1rem; color: var(--mute); }
+.reframe .promise b { display: block; font-family: var(--font-display); font-size: clamp(1.35rem, 1.15rem + .8vw, 1.75rem); line-height: 1.3; color: var(--ink); font-weight: 600; margin-top: 6px; }
 
 /* volets */
 .volets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -283,7 +298,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
   .steps li::before { position: absolute; left: 0; top: 0; }
   .steps li::after { top: 40px; bottom: -26px; left: 20px; right: auto; width: 1px; height: auto; }
   .steps h3 { margin-top: 6px; }
-  .fit { grid-template-columns: 1fr; }
+  .fit, .reframe-grid { grid-template-columns: 1fr; }
   .about img { max-width: 320px; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
   .mobile-bar { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--line); }
@@ -307,7 +322,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 
 <header class="site-head" id="top">
   <div class="wrap">
-    <a class="brand" href="/"><img src="img/axel-avatar.webp" width="36" height="36" alt=""><span><b>Axel Brunon</b><small>Bras droit à temps partagé</small></span></a>
+    <a class="brand" href="/"><span><b>Axel Brunon</b><small>Bras droit à temps partagé</small></span></a>
     <nav aria-label="Menu principal">
       <ul class="menu" id="menu">
         <li><a href="#offres">Accompagnement</a></li>
@@ -360,85 +375,40 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
     <div class="head-block">
       <span class="eyebrow">Le constat</span>
       <h2>Tu te reconnais dans une de ces phrases ?</h2>
-      <p class="lede">Coche celles qui te ressemblent.</p>
     </div>
-    <div class="phrases" id="phrases">
-      <label class="phrase"><input type="checkbox"><span class="box" aria-hidden="true"></span><span>Je fais cinq métiers à la fois, et aucun correctement.</span></label>
-      <label class="phrase"><input type="checkbox"><span class="box" aria-hidden="true"></span><span>Sans moi, l'équipe ne prend aucune décision.</span></label>
-      <label class="phrase"><input type="checkbox"><span class="box" aria-hidden="true"></span><span>La boîte grandit, mais ça ne pourra pas durer comme ça.</span></label>
-      <label class="phrase"><input type="checkbox"><span class="box" aria-hidden="true"></span><span>Si je lève le pied, tout s'écroule.</span></label>
-      <label class="phrase"><input type="checkbox"><span class="box" aria-hidden="true"></span><span>Je ne peux pas partir en vacances sans garder un œil sur mon téléphone.</span></label>
-    </div>
-    <div class="reco" id="reco" aria-live="polite" hidden>
-      <p>Tu en as coché plusieurs. On en parle 30 minutes ?</p>
-      <a class="btn btn-main" href="https://calendar.app.google/XDpeHXV7bzomEqcf6" target="_blank" rel="noopener">Réserver un échange de 30 min</a>
-    </div>
+    <ul class="phrases">
+      <li>« Je fais cinq métiers à la fois, et aucun correctement. »</li>
+      <li>« Sans moi, l'équipe ne prend aucune décision. »</li>
+      <li>« La boîte grandit, mais ça ne pourra pas durer comme ça. »</li>
+      <li>« Si je lève le pied, tout s'écroule. »</li>
+      <li>« Je ne peux pas partir en vacances sans garder un œil sur mon téléphone. »</li>
+    </ul>
   </div>
 </section>
 
 <!-- 4. Le recadrage -->
-<section class="reframe band">
+<section class="reframe fond-creme">
   <div class="wrap">
-    <div class="reframe-text">
-      <p>Si c'est encore toi qui réponds à chaque question difficile, qui valides chaque grosse décision et qui bouches chaque trou, tu n'as rien raté.</p>
-      <p>Tu as construit ta boîte autour de toi, parce que c'était la seule façon de la lancer.</p>
-      <p>Aujourd'hui, elle a besoin d'une organisation qui tienne sans que tout passe par toi.</p>
-    </div>
-    <p class="promise">Mon rôle :<b>que tu travailles sur ton entreprise, et pas uniquement dedans.</b></p>
-  </div>
-</section>
-
-<!-- 5. La solution : trois volets -->
-<section id="offres">
-  <div class="wrap">
-    <div class="head-block">
-      <span class="eyebrow">La solution</span>
-      <h2>Trois volets, mis en place dans ta boîte, avec ton équipe</h2>
-      <p class="lede">J'installe l'organisation qui permet à ta boîte de grandir de façon rentable, avec une équipe autonome. Je travaille avec ton équipe, sur tes vrais dossiers, et je reste après la mission. Tu ne reçois pas un rapport à ranger dans un tiroir.</p>
-    </div>
-    <div class="volets">
-      <div class="volet">
-        <span class="num">01</span>
-        <h3>Vision et stratégie</h3>
-        <p class="gain">Savoir où va ta boîte.</p>
-        <p>Un état des lieux complet de ton entreprise et de toi-même, transformé en plan d'action. Après la mission, un suivi trimestriel, parfois une place au comité de direction, pour ne plus décider seul.</p>
-        </div>
-      <div class="volet">
-        <span class="num">02</span>
-        <h3>Gestion humaine</h3>
-        <p class="gain">Une équipe qui sait quoi faire.</p>
-        <p>Des rôles clairs, la bonne personne au bon poste, de la délégation. Ton équipe sait qui décide quoi, et tu n'es plus le point de passage obligé.</p>
-        </div>
-      <div class="volet">
-        <span class="num">03</span>
-        <h3>Systèmes et IA</h3>
-        <p class="gain">Décider avec des chiffres.</p>
-        <p>Process, outils, connaissance partagée dans l'équipe, et un pilotage simple : trésorerie, marges, indicateurs clés. Tu sais si tu peux prendre un client de plus, et à partir de quand.</p>
-        <a class="more" href="https://youtu.be/1weCHXPiUAA" target="_blank" rel="noopener">Un exemple en vidéo : générer des leads qualifiés avec Claude →</a>
+    <div class="reframe-grid">
+      <div>
+        <p class="reframe-lead">Si c'est encore toi qui...</p>
+        <ul class="reframe-list">
+          <li>réponds à chaque question difficile</li>
+          <li>valides chaque grosse décision</li>
+          <li>bouches chaque trou</li>
+        </ul>
+        <p class="reframe-big">tu n'as rien raté.</p>
+      </div>
+      <div class="reframe-body">
+        <p>Tu as construit ta boîte autour de toi, parce que c'était la seule façon de la lancer.</p>
+        <p class="strong">Aujourd'hui, elle a besoin d'une organisation qui tienne sans que tout passe par toi.</p>
+        <p class="promise">Mon rôle :<b>que tu travailles sur ton entreprise, et pas uniquement dedans.</b></p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- 6. La méthode -->
-<section id="methode" class="band">
-  <div class="wrap">
-    <div class="head-block">
-      <span class="eyebrow">Comment ça se passe</span>
-      <h2>Du premier échange au suivi dans la durée</h2>
-    </div>
-    <ol class="steps">
-      <li><h3>Premier contact</h3><p>Nous parlons de ta situation et de tes objectifs, sans engagement.</p></li>
-      <li><h3>Diagnostic</h3><p>État des lieux de six dimensions : vision, humain, données, gestion des problèmes, process et suivi de l'exécution.</p></li>
-      <li><h3>Plan d'action</h3><p>Nous priorisons, et nous choisissons ensemble le chantier le plus utile.</p></li>
-      <li><h3>Mise en œuvre</h3><p>Outils concrets, formation, accompagnement au changement.</p></li>
-      <li><h3>Suivi long terme</h3><p>Jusqu'à 12 mois, parfois une place au comité de direction.</p></li>
-    </ol>
-    <p class="method-note">Une intervention initiale de quelques semaines, puis un accompagnement qui peut s'étendre sur plusieurs mois. J'ajuste au fil de l'eau plutôt que de livrer un rapport figé.</p>
-  </div>
-</section>
-
-<!-- 7. Pour qui / pas pour qui -->
+<!-- 5. Pour qui / pas pour qui -->
 <section id="pour-qui">
   <div class="wrap">
     <div class="head-block">
@@ -465,6 +435,55 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
         <p class="closing">Quand l'accompagnement correspond à ta situation, les résultats sont meilleurs pour tout le monde autour de la table.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- 6. La solution : trois volets -->
+<section id="offres" class="fond-nuit">
+  <div class="wrap">
+    <div class="head-block">
+      <span class="eyebrow">La solution</span>
+      <h2>Une boîte qui grandit de façon rentable, avec une équipe autonome</h2>
+      <p class="lede">J'installe l'organisation qui le permet. Je travaille avec toi, sur tes vrais dossiers, et je reste après la mission.</p>
+    </div>
+    <div class="volets">
+      <div class="volet">
+        <span class="num">01</span>
+        <h3>Vision et stratégie</h3>
+        <p class="gain">Savoir où va ta boîte.</p>
+        <p>Un état des lieux complet de ton entreprise et de toi-même, transformé en plan d'action. Après la mission, un suivi trimestriel, parfois une place au comité de direction, pour ne plus décider seul.</p>
+        </div>
+      <div class="volet">
+        <span class="num">02</span>
+        <h3>Gestion humaine</h3>
+        <p class="gain">Une équipe qui sait quoi faire.</p>
+        <p>Des rôles clairs, la bonne personne au bon poste, de la délégation. Ton équipe sait qui décide quoi, et tu n'es plus le point de passage obligé.</p>
+        </div>
+      <div class="volet">
+        <span class="num">03</span>
+        <h3>Systèmes et IA</h3>
+        <p class="gain">Décider avec des chiffres.</p>
+        <p>Process, outils, connaissance partagée dans l'équipe, et un pilotage simple : trésorerie, marges, indicateurs clés. Tu sais si tu peux prendre un client de plus, et à partir de quand.</p>
+        <a class="more" href="https://youtu.be/1weCHXPiUAA" target="_blank" rel="noopener">Un exemple en vidéo : générer des leads qualifiés avec Claude →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. La méthode -->
+<section id="methode" class="fond-creme">
+  <div class="wrap">
+    <div class="head-block">
+      <span class="eyebrow">Comment ça se passe</span>
+      <h2>Du premier échange au suivi dans la durée</h2>
+    </div>
+    <ol class="steps">
+      <li><h3>Premier contact</h3><p>Nous parlons de ta situation et de tes objectifs, sans engagement.</p></li>
+      <li><h3>Diagnostic</h3><p>État des lieux de six dimensions : vision, humain, données, gestion des problèmes, process et suivi de l'exécution.</p></li>
+      <li><h3>Plan d'action</h3><p>Nous priorisons, et nous choisissons ensemble le chantier le plus utile.</p></li>
+      <li><h3>Mise en œuvre</h3><p>Outils concrets, formation, accompagnement au changement.</p></li>
+      <li><h3>Suivi long terme</h3><p>Jusqu'à 12 mois, parfois une place au comité de direction.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -500,7 +519,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 </section>
 
 <!-- 10. Diagnostic (bloc existant conservé) -->
-<section id="diagnostic" class="band">
+<section id="diagnostic" class="fond-nuit">
   <div class="wrap diag">
     <div class="diag-intro">
       <span class="eyebrow">Pas encore prêt à en parler ?</span>
@@ -571,7 +590,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 
 <!-- 12. Derniers articles (généré par blog/build.py) -->
 <!-- blog:debut -->
-<section id="blog" class="band">
+<section id="blog" class="fond-creme">
   <div class="wrap">
     <div class="posts-head">
       <div><span class="eyebrow">Blog</span><h2>Derniers articles</h2></div>
@@ -593,7 +612,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 <!-- blog:fin -->
 
 <!-- 13. Bloc d'appel à l'action final (composant réutilisable) -->
-<section class="cta-final" id="contact">
+<section class="cta-final fond-orange" id="contact">
   <div class="wrap">
     <div class="box">
       <div>
@@ -659,14 +678,6 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
     var head = document.querySelector('.site-head'), burger = document.querySelector('.burger');
     burger.addEventListener('click', function () { burger.setAttribute('aria-expanded', head.classList.toggle('open')); });
     document.querySelectorAll('.menu a').forEach(function (l) { l.addEventListener('click', function () { head.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }); });
-  })();
-
-  /* phrases cochables : message à partir de 2 */
-  (function () {
-    var boxes = document.querySelectorAll('#phrases input'), reco = document.getElementById('reco');
-    boxes.forEach(function (c) { c.addEventListener('change', function () {
-      var n = 0; boxes.forEach(function (x) { if (x.checked) n++; }); reco.hidden = n < 2;
-    }); });
   })();
 
   /* diagnostic : jauge et profils (repris du site actuel) */
