@@ -255,23 +255,12 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .about .actions { margin-top: 28px; }
 
 /* diagnostic (bloc existant conservé) */
-.diag { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
-.gauge { padding: 28px; border-radius: 16px; background: var(--bg); border: 1px solid var(--line); }
-.gauge-top { display: flex; justify-content: space-between; align-items: baseline; }
-.score b { font-family: var(--font-display); font-size: 3rem; line-height: 1; }
-.score small { color: var(--mute); margin-left: 4px; }
-.gauge-label { color: var(--mute); font-size: .9rem; }
-.scale-wrap { position: relative; margin: 26px 0 10px; }
-.needle { position: absolute; left: var(--s); top: -10px; width: 2px; height: 58px; background: var(--ink); transform: translateX(-1px); transition: left .1s linear; }
-.scale { display: flex; gap: 4px; }
-.scale .bandc { flex: var(--w); height: 38px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface-2); color: var(--soft); font: 500 .85rem var(--font-body); cursor: pointer; }
-.scale .bandc[aria-pressed="true"] { border-color: var(--accent); color: var(--ink); }
-.scale-note { font-size: .88rem; color: var(--mute); margin-bottom: 18px; }
-.profile { border-left: 3px solid var(--accent); padding: 2px 0 2px 18px; min-height: 8.5rem; }
-.profile h3 { font-size: 1.25rem; }
-.profile p { margin-top: 8px; color: var(--soft); }
-.diag-intro p { color: var(--soft); margin-top: 16px; }
-.diag-intro .actions { margin-top: 28px; }
+#diagnostic { padding: clamp(40px, 5vw, 56px) 0; }
+.diag { display: flex; align-items: center; justify-content: space-between; gap: 20px 48px; }
+.diag h2 { font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2rem); }
+.diag p { color: var(--soft); margin-top: 10px; max-width: 62ch; }
+.diag .btn { flex: none; }
+@media (max-width: 760px) { .diag { flex-direction: column; align-items: flex-start; } }
 
 /* FAQ */
 .faq { max-width: 860px; }
@@ -647,33 +636,14 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 </section>
 
 <!-- 10. Diagnostic (bloc existant conservé) -->
-<section id="diagnostic" class="fond-nuit">
+<section id="diagnostic" class="fond-creme">
   <div class="wrap diag">
-    <div class="diag-intro">
+    <div>
       <span class="eyebrow">Envie d'y voir clair d'abord ?</span>
       <h2>Où en est ton organisation ?</h2>
-      <p>17 questions, 5 minutes. Tu reçois par email ton score sur 100, ton profil et la dimension de ton organisation où le score est le plus faible.</p>
-      <p>Dans chaque cas, je te propose ensuite un échange gratuit de 30 minutes pour en parler.</p>
-      <div class="actions">
-        <a class="btn btn-ghost" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=diagnostic" target="_blank" rel="noopener">Faire mon diagnostic en 5 min</a>
-      </div>
+      <p>17 questions, 5 minutes. Tu reçois par email ton score sur 100, ton profil et la dimension la plus faible de ton organisation, puis je te propose un échange gratuit de 30 minutes.</p>
     </div>
-    <div class="gauge" id="gauge">
-      <div class="gauge-top"><span class="score"><b id="score-n">32</b><small>/100</small></span><span class="gauge-label">Exemple de résultat</span></div>
-      <div class="scale-wrap" id="scale-wrap" style="--s:32%"><span class="needle" aria-hidden="true"></span>
-        <div class="scale" role="group" aria-label="Tranches de score">
-          <button class="bandc" type="button" style="--w:40" data-i="0" aria-pressed="true">0-40</button>
-          <button class="bandc" type="button" style="--w:25" data-i="1" aria-pressed="false">41-65</button>
-          <button class="bandc" type="button" style="--w:20" data-i="2" aria-pressed="false">66-85</button>
-          <button class="bandc" type="button" style="--w:15" data-i="3" aria-pressed="false">86-100</button>
-        </div>
-      </div>
-      <p class="scale-note">Choisis une tranche pour lire le profil correspondant.</p>
-      <div class="profile" id="profile" aria-live="polite">
-        <h3>L'entreprise tourne autour de toi</h3>
-        <p>Tu es partout parce que tu as toujours été la solution la plus fiable. Cela a un coût : ton temps, ton énergie, et la capacité de ton entreprise à grandir de façon autonome.</p>
-      </div>
-    </div>
+    <a class="btn btn-ghost" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=diagnostic" target="_blank" rel="noopener">Faire mon diagnostic en 5 min</a>
   </div>
 </section>
 
@@ -831,32 +801,6 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
     document.querySelectorAll('.menu a').forEach(function (l) { l.addEventListener('click', function () { head.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }); });
   })();
 
-  /* diagnostic : jauge et profils (repris du site actuel) */
-  (function () {
-    var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var profiles = [
-      ["L'entreprise tourne autour de toi", "Tu es partout parce que tu as toujours été la solution la plus fiable. Cela a un coût : ton temps, ton énergie, et la capacité de ton entreprise à grandir de façon autonome."],
-      ["Des bases, mais trop de dépendances", "Tu n'es pas au point de départ. Tu as construit une équipe, des habitudes, peut-être quelques process. Tu sens que ça coince encore et que tu portes trop."],
-      ["Organisation en construction", "Ton entreprise a une structure, des repères, une équipe qui commence à fonctionner de manière autonome. Il reste quelques angles morts, et ce sont souvent des détails qui font la différence."],
-      ["Entreprise autonome", "Tu as construit une entreprise qui tourne avec des process, des indicateurs, une équipe alignée. Tu pilotes."]
-    ];
-    var scores = [32, 54, 76, 93], cur = 32, anim = 0;
-    var bands = document.querySelectorAll('.bandc'), prof = document.getElementById('profile');
-    var num = document.getElementById('score-n'), wrap = document.getElementById('scale-wrap');
-    function show(v) { num.textContent = Math.round(v); wrap.style.setProperty('--s', v + '%'); }
-    function go(to) {
-      cancelAnimationFrame(anim);
-      if (reduce) { cur = to; show(to); return; }
-      var from = cur, t0 = performance.now();
-      (function step(now) { var t = Math.min(1, (now - t0) / 700), e = 1 - Math.pow(1 - t, 3); cur = from + (to - from) * e; show(cur); if (t < 1) anim = requestAnimationFrame(step); })(t0);
-    }
-    bands.forEach(function (b) { b.addEventListener('click', function () {
-      var i = +b.dataset.i;
-      bands.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      prof.innerHTML = '<h3></h3><p></p>'; prof.firstChild.textContent = profiles[i][0]; prof.lastChild.textContent = profiles[i][1];
-      go(scores[i]);
-    }); });
-  })();
 </script>
 </body>
 </html>
