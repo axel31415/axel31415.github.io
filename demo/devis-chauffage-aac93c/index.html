@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Démonstration : outil de devis | Axel Brunon</title>
+<!-- page privée : envoyée à un prospect, exclue de Google et du plan du site -->
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/fraunces-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Fraunces';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/fraunces-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/fonts/ibm-plex-sans-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'IBM Plex Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/fonts/ibm-plex-sans-latin-600-normal.woff2) format('woff2')}
+:root{--bg:#0e1015;--surface:#15181f;--ink:#f3f4f6;--soft:#c8ccd4;--mute:#959baa;--line:#2a2f3a;--accent:#4fd1f5;--action:#fe7e01;--action-hover:#feae3f;--on-action:#1a0d00;color-scheme:dark}
+@media (prefers-color-scheme:light){:root{--bg:#f4f7fc;--surface:#fff;--ink:#0e1830;--soft:#3b4966;--mute:#63728f;--line:#d3ddec;--accent:#0a7bb0;--action:#c55300;--action-hover:#a94600;--on-action:#fff;color-scheme:light}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 'IBM Plex Sans',-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{width:min(1040px,100% - 32px);margin-inline:auto}
+header{border-bottom:1px solid var(--line)}
+header .wrap{height:64px;display:flex;align-items:center}
+.brand{text-decoration:none;color:inherit}
+.brand b{display:block;font-family:'Fraunces',Georgia,serif;font-size:1.2rem;line-height:1.1}
+.brand small{color:var(--mute);font-size:.78rem}
+main{flex:1;padding:clamp(36px,6vw,64px) 0}
+.eyebrow{display:block;font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+h1{font-family:'Fraunces',Georgia,serif;font-weight:600;font-size:clamp(1.9rem,1.3rem + 2.2vw,2.9rem);line-height:1.12;margin:0;max-width:22ch;letter-spacing:-.01em}
+.lede{color:var(--soft);font-size:1.1rem;margin:14px 0 0;max-width:60ch}
+.video{margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.video video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.suite{margin-top:36px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px;padding:26px 28px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.suite p{margin:0;max-width:52ch;color:var(--soft)}
+.suite strong{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:10px;font-weight:600;text-decoration:none;background:var(--action);color:var(--on-action)}
+.btn:hover{background:var(--action-hover)}
+footer{padding:24px 0 32px;border-top:1px solid var(--line);font-size:.88rem;color:var(--mute)}
+footer a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="/"><b>Axel Brunon</b><small>Bras droit | COO externalisé</small></a></div></header>
+<main><div class="wrap">
+  <span class="eyebrow">Démonstration</span>
+  <h1>Un devis complet, de la fiche client à l'envoi</h1>
+  <p class="lede">Une minute pour voir l'outil en action. L'entreprise et le client de la vidéo sont fictifs.</p>
+
+  <div class="video">
+    <video controls playsinline preload="metadata" poster="apercu.jpg">
+      <source src="demo.mp4" type="video/mp4">
+      Votre navigateur ne lit pas cette vidéo. <a href="demo.mp4">Télécharger la vidéo</a>.
+    </video>
+  </div>
+
+  <div class="suite">
+    <p><strong>Un outil sur-mesure, connecté à vos données.</strong> On en parle 30 minutes pour voir ce qu'il donnerait chez vous&nbsp;?</p>
+    <a class="btn" href="https://calendar.app.google/XDpeHXV7bzomEqcf6" target="_blank" rel="noopener">Réserver un échange de 30 min</a>
+  </div>
+</div></main>
+<footer><div class="wrap">Axel Brunon · <a href="/">axelbrunon.fr</a> · <a href="/mentions-legales.html">Mentions légales</a> · <a href="/confidentialite.html">Confidentialité</a></div></footer>
+</body>
+</html>
