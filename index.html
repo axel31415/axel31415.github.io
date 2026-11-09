@@ -70,7 +70,7 @@ h2 { font-size: clamp(1.75rem, 1.2rem + 2vw, 2.5rem); }
 h3 { font-size: 1.3rem; }
 p { margin: 0; }
 .wrap { width: min(1160px, 100% - 32px); margin-inline: auto; }
-section { padding: clamp(64px, 8vw, 104px) 0; }
+section { padding: clamp(48px, 6vw, 76px) 0; }
 .band { background: var(--surface); border-block: 1px solid var(--line); }
 /* fonds alternés, repris des posts Instagram : crème pour respirer, nuit pour les listes, orange une seule fois.
    --bg sert de fond aux cartes posées dans la section. */
@@ -95,7 +95,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 }
 .eyebrow { display: block; font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
 .lede { color: var(--soft); font-size: 1.125rem; max-width: 62ch; margin-top: 16px; }
-.head-block { max-width: 760px; margin-bottom: 40px; }
+.head-block { max-width: 760px; margin-bottom: 32px; }
 
 
 /* boutons : un seul bouton plein, orange */
@@ -205,7 +205,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .ab-goal span { display: block; font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); margin-bottom: 4px; }
 .ab-goal p { font-weight: 500; color: var(--ink); }
 .ab-goal small { color: var(--mute); }
-.ab-levers { margin-top: 72px; }
+.ab-levers { margin-top: 56px; }
 .ab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .ab-lever { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
 .ab-lever-top { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
@@ -309,7 +309,8 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .posts .card .more::after { content: " →"; }
 
 /* bloc d'appel à l'action final (composant réutilisable) */
-.cta-final .box { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: center; padding: clamp(32px, 5vw, 56px); border-radius: 22px; background: var(--surface); border: 1px solid var(--line); }
+.cta-final { padding: clamp(36px, 4.5vw, 56px) 0; }
+.cta-final .box { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: center; padding: clamp(24px, 3vw, 36px) clamp(24px, 3.5vw, 44px); border-radius: 22px; background: var(--surface); border: 1px solid var(--line); }
 .cta-final ul { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 10px; color: var(--soft); }
 .cta-final li { padding-left: 28px; position: relative; }
 .cta-final li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 600; }
@@ -318,14 +319,15 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .cta-final .side small { color: var(--mute); }
 
 /* pied de page */
-.site-foot { padding: 64px 0 120px; border-top: 1px solid var(--line); background: var(--surface); }
-.foot-grid { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 32px; }
+.site-foot { padding: 40px 0 24px; border-top: 1px solid var(--line); background: var(--surface); }
+.foot-grid { display: grid; grid-template-columns: 1.2fr 1.6fr 1fr 1fr; gap: 32px; }
+.foot-grid > div:nth-child(2) ul { grid-template-columns: 1fr 1fr; column-gap: 20px; }
 .foot-grid h4 { margin: 0 0 14px; font: 600 .8rem var(--font-body); letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
-.foot-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.foot-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: .95rem; }
 .foot-grid a { color: var(--soft); text-decoration: none; }
 .foot-grid a:hover { color: var(--ink); }
 .foot-grid p { color: var(--soft); margin-top: 12px; max-width: 34ch; }
-.foot-legal { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px 24px; color: var(--mute); font-size: .9rem; }
+.foot-legal { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px 24px; color: var(--mute); font-size: .9rem; }
 .foot-legal a { color: var(--mute); }
 
 /* barre mobile fixe */
@@ -356,6 +358,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
   .foot-grid { grid-template-columns: 1fr 1fr; }
   .mobile-bar { display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); border-top: 1px solid var(--line); }
   .mobile-bar .btn { width: 100%; }
+  .site-foot { padding-bottom: 96px; }
 }
 @media (max-width: 560px) {
   body { font-size: 1rem; }
@@ -777,9 +780,9 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
         </ul>
       </div>
       <div class="side">
-        <img src="img/axel-avatar.webp" width="88" height="88" loading="lazy" alt="Portrait d'Axel Brunon">
+        <img src="img/axel-avatar-v2.webp" width="88" height="88" loading="lazy" alt="Portrait d'Axel Brunon">
         <a class="btn btn-main" href="https://calendar.app.google/XDpeHXV7bzomEqcf6" target="_blank" rel="noopener">Réserver un échange de 30 min</a>
-        <a class="link-alt" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=final" target="_blank" rel="noopener">Envie d'y voir clair d'abord ? Fais le diagnostic en 5 min.</a>
+        <a class="link-alt" href="https://tally.so/r/kdprko?utm_source=landing&utm_medium=site&utm_campaign=diagnostic&utm_content=final" target="_blank" rel="noopener">Envie d'y voir clair d'abord ? Faites le diagnostic en 5 min.</a>
       </div>
     </div>
   </div>
@@ -791,7 +794,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="/"><img src="img/axel-avatar.webp" width="36" height="36" alt=""><span><b>Axel Brunon</b><small>Bras droit | COO freelance</small></span></a>
+        <a class="brand" href="/"><img src="img/axel-avatar-v2.webp" width="36" height="36" alt=""><span><b>Axel Brunon</b><small>Bras droit | COO freelance</small></span></a>
         <p>Basé près de Lyon. J'interviens partout en France, sur place ou à distance.</p>
       </div>
       <div><h4>Accompagnement</h4><ul>
