@@ -134,38 +134,28 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .hero-sub { font-size: clamp(1.1rem, 1rem + .4vw, 1.3rem); color: var(--soft); max-width: 46ch; margin: 16px 0 34px; }
 .hero h1 .orange, .hero-sub .orange { color: var(--action); }
 .hero-accroche { margin-top: 18px; font-size: clamp(1.25rem, 1rem + .9vw, 1.65rem); font-weight: 500; line-height: 1.3; color: var(--accent); }
-/* titre en paliers : deux grands mots-clés, le reste en petit ; animation à l'arrivée */
-.titre-paliers { max-width: none; line-height: 1.05; }
-.titre-paliers .l { display: block; }
-.titre-paliers .petit { font-family: var(--font-body); font-weight: 500; font-size: clamp(1.15rem, 1rem + .7vw, 1.55rem); line-height: 1.35; color: var(--soft); letter-spacing: 0; }
-.titre-paliers .grand { font-size: clamp(2.5rem, 1.3rem + 4vw, 4.1rem); letter-spacing: -.02em; margin: .02em 0 .08em; }
-.titre-paliers .mais { margin-top: .9em; }
-.titre-paliers .limite { margin-top: .22em; }
-.titre-paliers .butee { position: relative; display: inline-block; padding-top: .14em; }
-.titre-paliers .mot { display: inline-block; }
-.titre-paliers .butee::before { content: ""; position: absolute; left: -.08em; right: -.08em; top: 0; height: .1em; border-radius: 99px; background: var(--action); }
+.titre-deux { font-size: clamp(2.1rem, 1.3rem + 2.4vw, 2.9rem); line-height: 1.15; max-width: 20ch; }
+.titre-deux .l1 { display: block; color: var(--soft); font-weight: 400; }
+.titre-deux .l2 { display: block; margin-top: .25em; color: var(--ink); }
+.titre-deux .marque { position: relative; z-index: 0; white-space: nowrap; }
+.titre-deux .marque::after { content: ""; position: absolute; left: 0; right: 0; bottom: .02em; height: .14em; background: var(--action); border-radius: 99px; z-index: -1; }
 @media (prefers-reduced-motion: no-preference) {
-  .titre-paliers .l { opacity: 0; animation: palier-monte .7s cubic-bezier(.2,.7,.2,1) forwards; }
-  .titre-paliers .l:nth-child(1) { animation-delay: .05s; }
-  .titre-paliers .l:nth-child(2) { animation-delay: .2s; }
-  .titre-paliers .l:nth-child(3) { animation-delay: .4s; }
-  .titre-paliers .l:nth-child(4) { animation-delay: .9s; }
-  .titre-paliers .limite { opacity: 1; animation: none; }
-  .titre-paliers .butee::before { transform: scaleX(0); transform-origin: left; animation: plafond-trace .5s ease-out 1.1s forwards; }
-  .titre-paliers .mot { opacity: 0; animation: plafond-butee .9s cubic-bezier(.3,.7,.3,1) 1.45s forwards; }
-  .hero-sub, .hero .actions { opacity: 0; animation: palier-monte .6s ease-out 2.1s forwards; }
+  .titre-deux .l1, .titre-deux .l2, .hero-sub, .hero .actions { opacity: 0; animation: titre-monte .7s cubic-bezier(.2,.7,.2,1) forwards; }
+  .titre-deux .l2 { animation-delay: .25s; }
+  .titre-deux .marque::after { transform: scaleX(0); transform-origin: left; animation: trait-trace .5s ease-out .85s forwards; }
+  .hero-sub, .hero .actions { animation-delay: .6s; }
 }
-@keyframes palier-monte { from { opacity: 0; transform: translateY(.5em); } to { opacity: 1; transform: none; } }
-@keyframes plafond-trace { to { transform: scaleX(1); } }
-/* le texte monte, cogne le plafond et redescend un peu */
-@keyframes plafond-butee { 0% { opacity: 0; transform: translateY(.6em); } 55% { opacity: 1; transform: translateY(-.12em); } 75% { transform: translateY(.04em); } 100% { opacity: 1; transform: none; } }
+@keyframes titre-monte { from { opacity: 0; transform: translateY(.4em); } to { opacity: 1; transform: none; } }
+@keyframes trait-trace { to { transform: scaleX(1); } }
 .hero-sub strong { color: var(--ink); font-weight: 600; }
 .hero-photo { position: relative; align-self: end; justify-self: center; width: min(100%, 380px); }
 .photo-tag { position: absolute; right: 74%; top: -12%; z-index: 2; margin: 0; display: flex; align-items: flex-start; pointer-events: none; }
 .photo-tag span { font: 600 1.2rem var(--font-body); white-space: nowrap; color: var(--ink); padding: 10px 18px; border: 2px solid var(--accent); border-radius: 999px; background: color-mix(in srgb, var(--bg) 88%, transparent); }
 .photo-tag span b { color: var(--accent); font-weight: 600; margin-inline: 4px; }
 .photo-tag svg { flex: none; width: 92px; height: 70px; margin: 24px 0 0 -4px; color: var(--accent); }
-.hero-photo img { filter: drop-shadow(0 18px 40px rgba(0,0,0,.35)); }
+.hero-photo img { position: relative; z-index: 1; filter: drop-shadow(0 0 1.5px rgba(255,190,110,.9)) drop-shadow(0 0 12px rgba(254,126,1,.45)) drop-shadow(0 0 36px rgba(254,110,0,.28)); }
+/* contre-jour : halo orangé derrière la photo */
+.hero-photo::before { content: ""; position: absolute; left: 50%; bottom: 6%; width: 150%; height: 110%; transform: translateX(-50%); background: radial-gradient(closest-side at 50% 40%, rgba(254,126,1,.34), rgba(254,126,1,.12) 55%, transparent 100%); pointer-events: none; }
 
 /* barre de preuve */
 .proof { padding: 36px 0; }
@@ -403,12 +393,9 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 <section class="hero" id="hero">
   <div class="wrap">
     <div class="hero-text">
-      <h1 class="titre-paliers">
-        <span class="l petit">Envie de</span>
-        <span class="l grand orange cap">passer un cap</span>
-        <span class="l petit">de croissance avec votre entreprise ?</span>
-        <span class="l petit mais">Mais votre organisation a</span>
-        <span class="l grand limite"><span class="butee"><span class="mot">atteint sa limite ?</span></span></span>
+      <h1 class="titre-deux">
+        <span class="l1">Envie de passer un cap de croissance ?</span>
+        <span class="l2">Mais votre organisation a atteint <span class="marque">sa limite</span> ?</span>
       </h1>
       <p class="hero-sub">J'installe avec vous <strong>les rôles, les indicateurs et les process</strong> qui vont structurer votre organisation, et <strong>réduire la dépendance de votre entreprise envers vous</strong>.</p>
       <div class="actions">
@@ -417,7 +404,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
       </div>
     </div>
     <div class="hero-photo">
-      <img src="img/axel-hero.webp" srcset="img/axel-hero.webp 322w, img/axel-hero@2x.webp 645w" sizes="(max-width: 960px) 320px, 380px" width="322" height="541" alt="Axel Brunon, debout, bras croisés, souriant face à l'objectif" fetchpriority="high">
+      <img src="img/axel-hero-v2.webp" srcset="img/axel-hero-v2.webp 322w, img/axel-hero-v2@2x.webp 645w" sizes="(max-width: 960px) 320px, 380px" width="322" height="541" alt="Axel Brunon, debout, bras croisés, souriant face à l'objectif" fetchpriority="high">
       <p class="photo-tag"><span>Bras droit<b>|</b>COO freelance</span><svg viewBox="0 0 92 70" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8 C 34 4, 70 18, 82 58"/><path d="M70 50 L 82 60 L 88 45"/></svg></p>
     </div>
   </div>
