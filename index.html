@@ -129,7 +129,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 .hero::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 56px 56px; -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 95%); mask-image: linear-gradient(to bottom, #000 30%, transparent 95%); pointer-events: none; }
 .hero::after { content: ""; position: absolute; width: 640px; height: 640px; right: -80px; top: -60px; background: radial-gradient(circle, var(--halo), transparent 65%); pointer-events: none; }
 .hero .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr .75fr; gap: 40px; align-items: end; }
-.hero-text { padding-bottom: clamp(56px, 7vw, 96px); }
+.hero-text { padding-bottom: clamp(36px, 4vw, 48px); }
 .hero h1 { font-size: clamp(2rem, 1.2rem + 2.6vw, 3.1rem); line-height: 1.1; max-width: 21ch; }
 .hero-sub { font-size: clamp(1.1rem, 1rem + .4vw, 1.3rem); color: var(--soft); max-width: 46ch; margin: 16px 0 34px; }
 .hero h1 .orange, .hero-sub .orange { color: var(--action); }
@@ -148,8 +148,9 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
 @keyframes titre-monte { from { opacity: 0; transform: translateY(.4em); } to { opacity: 1; transform: none; } }
 @keyframes trait-trace { to { transform: scaleX(1); } }
 .hero-sub strong { color: var(--ink); font-weight: 600; }
-.hero-photo { position: relative; align-self: end; justify-self: center; width: min(100%, 380px); }
-.photo-tag { position: absolute; right: 74%; top: -12%; z-index: 2; margin: 0; display: flex; align-items: flex-start; pointer-events: none; }
+.hero-photo { position: relative; align-self: end; justify-self: center; width: min(100%, 340px); margin-bottom: -110px; }
+.photo-tag { position: absolute; left: 50%; top: -11%; transform: translateX(-50%); z-index: 2; margin: 0; display: flex; align-items: flex-start; pointer-events: none; }
+.photo-tag svg { display: none; }
 .photo-tag span { font: 600 1.2rem var(--font-body); white-space: nowrap; color: var(--ink); padding: 10px 18px; border: 2px solid var(--accent); border-radius: 999px; background: color-mix(in srgb, var(--bg) 88%, transparent); }
 .photo-tag span b { color: var(--accent); font-weight: 600; margin-inline: 4px; }
 .photo-tag svg { flex: none; width: 92px; height: 70px; margin: 24px 0 0 -4px; color: var(--accent); }
@@ -339,7 +340,8 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
   .hero .wrap { grid-template-columns: 1fr; gap: 0; }
   .hero-text { padding-bottom: 8px; }
   .hero-photo { width: min(78%, 320px); margin-top: 48px; }
-  .photo-tag { right: auto; left: -20%; top: -2%; flex-direction: column; align-items: flex-start; }
+  .photo-tag { right: auto; left: -20%; top: -2%; transform: none; flex-direction: column; align-items: flex-start; }
+  .photo-tag svg { display: block; }
   .photo-tag span { font-size: 1rem; padding: 8px 14px; }
   .photo-tag svg { width: 70px; height: 54px; margin: 2px 0 0 96px; }
   .proof .wrap, .diag, .about, .cta-final .box { grid-template-columns: 1fr; }
@@ -404,7 +406,7 @@ section { padding: clamp(64px, 8vw, 104px) 0; }
       </div>
     </div>
     <div class="hero-photo">
-      <img src="img/axel-hero-v2.webp" srcset="img/axel-hero-v2.webp 322w, img/axel-hero-v2@2x.webp 645w" sizes="(max-width: 960px) 320px, 380px" width="322" height="541" alt="Axel Brunon, debout, bras croisés, souriant face à l'objectif" fetchpriority="high">
+      <img src="img/axel-hero-v2.webp" srcset="img/axel-hero-v2.webp 322w, img/axel-hero-v2@2x.webp 645w" sizes="340px" width="322" height="541" alt="Axel Brunon, debout, bras croisés, souriant face à l'objectif" fetchpriority="high">
       <p class="photo-tag"><span>Bras droit<b>|</b>COO freelance</span><svg viewBox="0 0 92 70" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8 C 34 4, 70 18, 82 58"/><path d="M70 50 L 82 60 L 88 45"/></svg></p>
     </div>
   </div>
